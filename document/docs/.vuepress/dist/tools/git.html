@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Git 基本使用 | ∞</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="icon" href="/favicon.png">
+    <meta name="description" content="技术博客">
+    
+    <link rel="preload" href="/assets/css/0.styles.9f84806b.css" as="style"><link rel="preload" href="/assets/js/app.71d0a6ab.js" as="script"><link rel="preload" href="/assets/js/2.88ecbf0a.js" as="script"><link rel="preload" href="/assets/js/1.ade45e35.js" as="script"><link rel="preload" href="/assets/js/24.1e34847f.js" as="script"><link rel="prefetch" href="/assets/js/10.7f64196e.js"><link rel="prefetch" href="/assets/js/11.6f3e8bd7.js"><link rel="prefetch" href="/assets/js/12.63636d74.js"><link rel="prefetch" href="/assets/js/13.986a1a7a.js"><link rel="prefetch" href="/assets/js/14.7f1f2d89.js"><link rel="prefetch" href="/assets/js/15.e4ed6557.js"><link rel="prefetch" href="/assets/js/16.bd1a48f3.js"><link rel="prefetch" href="/assets/js/17.20da9bf2.js"><link rel="prefetch" href="/assets/js/18.a938f922.js"><link rel="prefetch" href="/assets/js/19.e3754cca.js"><link rel="prefetch" href="/assets/js/20.24f07836.js"><link rel="prefetch" href="/assets/js/21.3fc53ab6.js"><link rel="prefetch" href="/assets/js/22.6901d844.js"><link rel="prefetch" href="/assets/js/23.ca182cb0.js"><link rel="prefetch" href="/assets/js/25.39b2c957.js"><link rel="prefetch" href="/assets/js/26.9cb068f4.js"><link rel="prefetch" href="/assets/js/27.0d585e24.js"><link rel="prefetch" href="/assets/js/28.24cffcc2.js"><link rel="prefetch" href="/assets/js/29.4d2081bd.js"><link rel="prefetch" href="/assets/js/3.8183d830.js"><link rel="prefetch" href="/assets/js/30.de2bf18b.js"><link rel="prefetch" href="/assets/js/31.8803f23f.js"><link rel="prefetch" href="/assets/js/32.12037825.js"><link rel="prefetch" href="/assets/js/33.ac2ea6a2.js"><link rel="prefetch" href="/assets/js/34.fc22af2f.js"><link rel="prefetch" href="/assets/js/35.115dccf6.js"><link rel="prefetch" href="/assets/js/36.d68a25c5.js"><link rel="prefetch" href="/assets/js/37.940f427a.js"><link rel="prefetch" href="/assets/js/38.58a0592d.js"><link rel="prefetch" href="/assets/js/39.3eac0241.js"><link rel="prefetch" href="/assets/js/4.722a3bb4.js"><link rel="prefetch" href="/assets/js/40.7d238259.js"><link rel="prefetch" href="/assets/js/41.8c2fbdb3.js"><link rel="prefetch" href="/assets/js/42.682cee9c.js"><link rel="prefetch" href="/assets/js/43.d132570c.js"><link rel="prefetch" href="/assets/js/44.696a43e1.js"><link rel="prefetch" href="/assets/js/45.fd384626.js"><link rel="prefetch" href="/assets/js/46.ca023eb1.js"><link rel="prefetch" href="/assets/js/47.e597e295.js"><link rel="prefetch" href="/assets/js/48.7d4de1cb.js"><link rel="prefetch" href="/assets/js/49.5dee4bfe.js"><link rel="prefetch" href="/assets/js/5.998f9103.js"><link rel="prefetch" href="/assets/js/50.b03bbbbb.js"><link rel="prefetch" href="/assets/js/51.c5e0fcaf.js"><link rel="prefetch" href="/assets/js/52.887b2039.js"><link rel="prefetch" href="/assets/js/53.a70c4a8a.js"><link rel="prefetch" href="/assets/js/54.b7559b6a.js"><link rel="prefetch" href="/assets/js/55.83741f26.js"><link rel="prefetch" href="/assets/js/56.8832b8cc.js"><link rel="prefetch" href="/assets/js/57.b34ada6b.js"><link rel="prefetch" href="/assets/js/58.c0c4f6d8.js"><link rel="prefetch" href="/assets/js/59.8a67ecd3.js"><link rel="prefetch" href="/assets/js/6.ec5040da.js"><link rel="prefetch" href="/assets/js/60.657d4d40.js"><link rel="prefetch" href="/assets/js/61.5fce9f3b.js"><link rel="prefetch" href="/assets/js/62.bedfb4c7.js"><link rel="prefetch" href="/assets/js/63.718b4388.js"><link rel="prefetch" href="/assets/js/64.7206788b.js"><link rel="prefetch" href="/assets/js/65.341d0bae.js"><link rel="prefetch" href="/assets/js/66.c227fe91.js"><link rel="prefetch" href="/assets/js/67.d60d199a.js"><link rel="prefetch" href="/assets/js/68.51012513.js"><link rel="prefetch" href="/assets/js/69.7590adc2.js"><link rel="prefetch" href="/assets/js/7.1276edb2.js"><link rel="prefetch" href="/assets/js/70.046b40ac.js"><link rel="prefetch" href="/assets/js/71.296c2c8c.js"><link rel="prefetch" href="/assets/js/72.02face10.js"><link rel="prefetch" href="/assets/js/73.e7f08eef.js"><link rel="prefetch" href="/assets/js/74.8febeb58.js"><link rel="prefetch" href="/assets/js/75.ef9c348c.js"><link rel="prefetch" href="/assets/js/76.6dd69548.js"><link rel="prefetch" href="/assets/js/77.04446c75.js"><link rel="prefetch" href="/assets/js/78.bfeeea87.js"><link rel="prefetch" href="/assets/js/79.076a0cab.js"><link rel="prefetch" href="/assets/js/80.7b9e8313.js"><link rel="prefetch" href="/assets/js/81.34debb7b.js"><link rel="prefetch" href="/assets/js/82.a78018c2.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.4f1414c9.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.9f84806b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/favicon.png" alt="∞" class="logo"> <span class="site-name can-hide">∞</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JavaScript" class="dropdown-title"><span class="title">JavaScript</span> <span class="arrow down"></span></button> <button type="button" aria-label="JavaScript" class="mobile-dropdown-title"><span class="title">JavaScript</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/js/js-basic/01.variable.html" class="nav-link">
+  JavsScript基础
+</a></li><li class="dropdown-item"><!----> <a href="/js/js-object-basic/01.objcet.html" class="nav-link">
+  对象基础
+</a></li><li class="dropdown-item"><!----> <a href="/js/js-types/01.number.html" class="nav-link">
+  数据类型
+</a></li><li class="dropdown-item"><!----> <a href="/js/js-function/01.closure.html" class="nav-link">
+  函数进阶
+</a></li><li class="dropdown-item"><!----> <a href="/js/js-object/01.property.html" class="nav-link">
+  对象属性配置
+</a></li><li class="dropdown-item"><!----> <a href="/js/js-prototype/01.prototype.html" class="nav-link">
+  原型，继承
+</a></li><li class="dropdown-item"><!----> <a href="/js/js-class/01.class.html" class="nav-link">
+  类
+</a></li><li class="dropdown-item"><!----> <a href="/js/js-promise/01.promise.html" class="nav-link">
+  Promise
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="CSS" class="dropdown-title"><span class="title">CSS</span> <span class="arrow down"></span></button> <button type="button" aria-label="CSS" class="mobile-dropdown-title"><span class="title">CSS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          布局
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/css/layout/float.html" class="nav-link">
+  Float 父元素高度塌陷
+</a></li><li class="dropdown-subitem"><a href="/css/layout/flex.html" class="nav-link">
+  Flex 基本使用
+</a></li><li class="dropdown-subitem"><a href="/css/layout/grid.html" class="nav-link">
+  Grid 基本使用
+</a></li><li class="dropdown-subitem"><a href="/css/layout/responsive.html" class="nav-link">
+  响应式布局
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Vue" class="dropdown-title"><span class="title">Vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="Vue" class="mobile-dropdown-title"><span class="title">Vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Vue基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/vue-basic/reactivity.html" class="nav-link">
+  响应式原理
+</a></li><li class="dropdown-subitem"><a href="/vue/vue-basic/vue-basic.html" class="nav-link">
+  Vue配置项
+</a></li><li class="dropdown-subitem"><a href="/vue/vue-basic/class&amp;style.html" class="nav-link">
+  Class绑定
+</a></li><li class="dropdown-subitem"><a href="/vue/vue-basic/v-if&amp;v-show.html" class="nav-link">
+  条件渲染
+</a></li><li class="dropdown-subitem"><a href="/vue/vue-basic/Vue-lifecycle.html" class="nav-link">
+  生命周期
+</a></li><li class="dropdown-subitem"><a href="/vue/vue-basic/component.html" class="nav-link">
+  组件基本使用
+</a></li><li class="dropdown-subitem"><a href="/vue/vue-basic/communication.html" class="nav-link">
+  组件传值
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vue-router
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/vuerouter/vue-router-basic.html" class="nav-link">
+  基本使用
+</a></li><li class="dropdown-subitem"><a href="/vue/vuerouter/params&amp;query.html" class="nav-link">
+  动态路由匹配
+</a></li><li class="dropdown-subitem"><a href="/vue/vuerouter/navigation.html" class="nav-link">
+  编程式导航
+</a></li></ul></li><li class="dropdown-item"><h4>
+          组合式API
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/composition/setup.html" class="nav-link">
+  setup
+</a></li><li class="dropdown-subitem"><a href="/vue/composition/ref&amp;reactive.html" class="nav-link">
+  响应式数据
+</a></li><li class="dropdown-subitem"><a href="/vue/composition/computed.html" class="nav-link">
+  computed
+</a></li><li class="dropdown-subitem"><a href="/vue/composition/watch.html" class="nav-link">
+  watch
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Pinia
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/pinia/pinia.html" class="nav-link">
+  pinia基本使用
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/tools/git.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  工具
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JavaScript" class="dropdown-title"><span class="title">JavaScript</span> <span class="arrow down"></span></button> <button type="button" aria-label="JavaScript" class="mobile-dropdown-title"><span class="title">JavaScript</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/js/js-basic/01.variable.html" class="nav-link">
+  JavsScript基础
+</a></li><li class="dropdown-item"><!----> <a href="/js/js-object-basic/01.objcet.html" class="nav-link">
+  对象基础
+</a></li><li class="dropdown-item"><!----> <a href="/js/js-types/01.number.html" class="nav-link">
+  数据类型
+</a></li><li class="dropdown-item"><!----> <a href="/js/js-function/01.closure.html" class="nav-link">
+  函数进阶
+</a></li><li class="dropdown-item"><!----> <a href="/js/js-object/01.property.html" class="nav-link">
+  对象属性配置
+</a></li><li class="dropdown-item"><!----> <a href="/js/js-prototype/01.prototype.html" class="nav-link">
+  原型，继承
+</a></li><li class="dropdown-item"><!----> <a href="/js/js-class/01.class.html" class="nav-link">
+  类
+</a></li><li class="dropdown-item"><!----> <a href="/js/js-promise/01.promise.html" class="nav-link">
+  Promise
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="CSS" class="dropdown-title"><span class="title">CSS</span> <span class="arrow down"></span></button> <button type="button" aria-label="CSS" class="mobile-dropdown-title"><span class="title">CSS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          布局
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/css/layout/float.html" class="nav-link">
+  Float 父元素高度塌陷
+</a></li><li class="dropdown-subitem"><a href="/css/layout/flex.html" class="nav-link">
+  Flex 基本使用
+</a></li><li class="dropdown-subitem"><a href="/css/layout/grid.html" class="nav-link">
+  Grid 基本使用
+</a></li><li class="dropdown-subitem"><a href="/css/layout/responsive.html" class="nav-link">
+  响应式布局
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Vue" class="dropdown-title"><span class="title">Vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="Vue" class="mobile-dropdown-title"><span class="title">Vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Vue基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/vue-basic/reactivity.html" class="nav-link">
+  响应式原理
+</a></li><li class="dropdown-subitem"><a href="/vue/vue-basic/vue-basic.html" class="nav-link">
+  Vue配置项
+</a></li><li class="dropdown-subitem"><a href="/vue/vue-basic/class&amp;style.html" class="nav-link">
+  Class绑定
+</a></li><li class="dropdown-subitem"><a href="/vue/vue-basic/v-if&amp;v-show.html" class="nav-link">
+  条件渲染
+</a></li><li class="dropdown-subitem"><a href="/vue/vue-basic/Vue-lifecycle.html" class="nav-link">
+  生命周期
+</a></li><li class="dropdown-subitem"><a href="/vue/vue-basic/component.html" class="nav-link">
+  组件基本使用
+</a></li><li class="dropdown-subitem"><a href="/vue/vue-basic/communication.html" class="nav-link">
+  组件传值
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vue-router
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/vuerouter/vue-router-basic.html" class="nav-link">
+  基本使用
+</a></li><li class="dropdown-subitem"><a href="/vue/vuerouter/params&amp;query.html" class="nav-link">
+  动态路由匹配
+</a></li><li class="dropdown-subitem"><a href="/vue/vuerouter/navigation.html" class="nav-link">
+  编程式导航
+</a></li></ul></li><li class="dropdown-item"><h4>
+          组合式API
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/composition/setup.html" class="nav-link">
+  setup
+</a></li><li class="dropdown-subitem"><a href="/vue/composition/ref&amp;reactive.html" class="nav-link">
+  响应式数据
+</a></li><li class="dropdown-subitem"><a href="/vue/composition/computed.html" class="nav-link">
+  computed
+</a></li><li class="dropdown-subitem"><a href="/vue/composition/watch.html" class="nav-link">
+  watch
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Pinia
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/pinia/pinia.html" class="nav-link">
+  pinia基本使用
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/tools/git.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  工具
+</a></div> <!----></nav>  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="git-基本使用"><a href="#git-基本使用" class="header-anchor">#</a> Git 基本使用</h1> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>基本命令行指令：</p> <ul><li><p><code>cd ..</code> 进入上一级目录</p></li> <li><p><code>cd 目录名</code> 进入指定目录</p></li> <li><p><code>md newfloder</code> 在当前目录下创建文件夹 newfloder</p></li> <li><p><code>rd</code> 删除文件夹</p></li> <li><p><code>cls</code> 清空命令行窗口</p></li> <li><p><code>type nul&gt;文件名.后缀名</code> 创建文件</p></li> <li><p><code>echo '内容' &gt; 文件名.后缀名</code> 向文件中写入内容</p></li> <li><p><code>echo '内容' &gt;&gt; 文件名.后缀名</code> 向文件中追加内容</p></li> <li><p><code>vi 文件名.后缀</code> 编辑文件内容</p></li> <li><p><code>ls</code> 查看当前文件夹内容</p></li> <li><p><code>rm</code> 删除文件</p></li></ul></div> <h2 id="初始化设置"><a href="#初始化设置" class="header-anchor">#</a> 初始化设置</h2> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <ul><li><code>git -v</code> 查看 git 版本</li> <li><code>git config --global user.name userName</code> 配置用户名为 userName</li> <li><code>git config --global user.email xxxxx@xxx.com</code> 配置邮箱为 xxxxx@xxx.com</li> <li><code>git config --global --list</code> 查看配置信息</li></ul></div> <p>使用 <code>git -v</code> 查看 git 版本，接下来配置用户名和邮箱，用来记录是谁提交了文件</p> <p>配置用户名
+<code>git config --global user.name Bruce</code></p> <ul><li>其中
+<ul><li>若省略 <code>--global</code> 则为本地配置，只对本地仓库有效</li> <li><code>--global</code>: 全局配置，所有仓库生效</li> <li><code>--system</code>：系统配置，对所有用户生效，一般不使用</li></ul></li></ul> <p>配置邮箱</p> <p><code>git config --global user.email xxxxx@xxx.com</code></p> <p>如果 <code>user.name/user.email</code> 后为的字符串包含空格，则需要用引号包裹</p> <p><code>git config --global user.name &quot;Bruce Wayne&quot;</code></p> <p>查看配置信息</p> <p><code>git config --global --list</code></p> <h2 id="新建仓库"><a href="#新建仓库" class="header-anchor">#</a> 新建仓库</h2> <p>两种方式创建仓库</p> <ul><li>方式一：本地直接创建仓库 <code>git init</code></li> <li>方式二：从远程服务器克隆一个已存在的仓库 <code>git clone</code></li></ul> <p><code>git init</code> 在当前目录下生成仓库</p> <p><code>git init xxx</code> 在当前目录下创建 <code>xxx</code> 文件夹，在 <code>xxx</code> 文件夹下创建仓库
+等价于</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>md xxx
+cd xxx
+git init
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h2 id="工作区域和文件状态"><a href="#工作区域和文件状态" class="header-anchor">#</a> 工作区域和文件状态</h2> <h3 id="工作区域"><a href="#工作区域" class="header-anchor">#</a> 工作区域</h3> <p>Git 本地数据管理分为三个区域</p> <ul><li>工作区（Working Directory）
+<ul><li>也叫工作目录或本地工作目录，资源管理器里能看到的文件夹就是工作区</li> <li>实际操作目录</li></ul></li> <li>暂存区（Staging Area/Index）
+<ul><li>临时存储区域，用于保存即将提交到 Git 仓库的修改内容</li></ul></li> <li>本地仓库（Local Repository）
+<ul><li>通过 <code>git init</code> 创建的仓库</li> <li>包含了完整的项目历史和元数据，是 Git 存储代码和版本信息的主要位置</li></ul></li></ul> <p>工作区就是 <code>.git</code> 所在的目录，暂存区为 <code>.git/index</code>，本地仓库是 <code>.git/objects</code></p> <p>修改完工作区的内容后，需要通过 <code>git add</code> 添加到暂存区，最后使用 <code>git commit</code> 提交到本地仓库</p> <p><code>ls</code> 命令查看工作区内容
+<code>git ls-files</code> 查看暂存区内容</p> <h3 id="文件状态"><a href="#文件状态" class="header-anchor">#</a> 文件状态</h3> <p>Git 中的文件也存在几种状态</p> <ul><li>未跟踪 Untrack
+<ul><li>新创建的还没被 Git 管理起来的文件</li></ul></li> <li>未修改 Unmodified
+<ul><li>已被 Git 管理，内容未被修改，未发生变化的文件</li></ul></li> <li>已修改 Modified
+<ul><li>已被修改，但还未被添加到暂存区的文件</li></ul></li> <li>已暂存 Staged
+<ul><li>修改后已被暂存的文件</li></ul></li></ul> <h2 id="添加和提交文件"><a href="#添加和提交文件" class="header-anchor">#</a> 添加和提交文件</h2> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <ul><li><code>git init</code> —— 创建仓库</li> <li><code>git status</code> —— 查看仓库状态</li> <li><code>git add</code> —— 添加到暂存区</li> <li><code>git commit</code> —— 提交暂存区中的文件到本地仓库</li> <li><code>git log</code> —— 查看提交历史</li></ul></div> <ul><li><code>git init</code> 创建仓库</li> <li><code>git.add hello.txt</code> 将 <code>hello.txt</code> 文件添加到暂存区</li> <li><code>git status</code> 查看仓库状态</li> <li><code>git commit -m '第一次提交</code> 提交暂存区的文件到本地仓库。</li> <li><code>git log</code> 查看提交历史</li></ul> <img src="/assets/img/git1.7e672dea.png" alt="" style="display:block;margin:0 auto;"> <p><code>git commit -m &quot;提交信息&quot;</code>
+提交信息会被记录到仓库中
+如果没有提交信息，会进入一个页面，
+按下 <code>i</code> 进入编辑模式，使用方向键移动光标，第一行写上提交信息，再按下 <code>Esc</code> 退出编辑模式，输入 <code>:wq</code> 保存退出。</p> <p><code>git add</code> 可选参数</p> <ul><li><code>git add *.txt</code> 将所有 <code>.txt</code> 后缀文件添加到暂存区</li> <li><code>git add .</code> 将当前文件夹下的所有文件都添加到暂存区</li></ul> <p><code>git commit</code> 参数</p> <ul><li><code>git commit -m 'msg'</code> 将 <code>msg</code> 作为本次提交信息</li></ul> <p><code>git log --oneline</code> 查看精简提交历史</p> <h2 id="回退版本"><a href="#回退版本" class="header-anchor">#</a> 回退版本</h2> <p><code>git reset</code> 三种不同类型的参数</p> <ul><li><code>git reset --soft xxxx</code> <ul><li>回退到版本 id 为 xxx 的版本，并保留工作区和暂存区的所有修改内容</li></ul></li> <li><code>git reset --hard xxx</code> <ul><li>回退到版本 id 为 xxx 的版本，并丢弃工作区和暂存区的所有修改内容</li></ul></li> <li><code>git reset --mixed xxx</code> (默认)
+<ul><li>回退到版本 id 为 xxx 的版本，保留工作区但丢弃暂存区的所有修改内容</li></ul></li></ul> <p><code>HEAD^</code> 表示当前版本
+<code>git reset --soft HEAD^</code> —— 回退到上个版本，并保留工作区和暂存区的所有内容</p> <p>理解：</p> <ul><li><code>--soft HEAD^</code> 回退到当前版本提交前</li> <li><code>--hard HEAD^</code> 回退到当前版本提交前，且文件未被修改时</li> <li><code>--mixed HEAD^</code> 回退到当前版本添加至仓库前</li></ul> <img src="/assets/img/git4.4697e737.png" alt="" style="display:block;margin:0 auto;"> <p><code>git reflog</code> 历史操作记录</p> <h2 id="查看差异"><a href="#查看差异" class="header-anchor">#</a> 查看差异</h2> <p><code>git diff</code></p> <ul><li>查看工作区、暂存区、本地仓库之间的差异</li> <li>查看不同版本之间的差异</li> <li>查看不同分支之间的差异</li></ul> <h3 id="比较工作区、暂存区、本地仓库之间的差异"><a href="#比较工作区、暂存区、本地仓库之间的差异" class="header-anchor">#</a> 比较工作区、暂存区、本地仓库之间的差异</h3> <p><code>git diff</code>
+默认比较工作区和暂存区之间的差异</p> <p><code>git diff HEAD</code>
+比较工作区和版本库之间的差异</p> <p><code>git diff --catched</code>
+比较暂存区和版本库之间的差异</p> <h3 id="比较不同版本的差异"><a href="#比较不同版本的差异" class="header-anchor">#</a> 比较不同版本的差异</h3> <p><code>git diff id1 id2</code></p> <p>比较现在版本和上个版本</p> <p><code>git HEAD~ HEAD</code> <code>HEAD~</code>/ <code>HEAD^</code> 都表示上个版本</p> <p><code>HEAD~2</code> 表示 <code>HEAD</code> 之前的倒数第二个版本</p> <h2 id="删除文件"><a href="#删除文件" class="header-anchor">#</a> 删除文件</h2> <ol><li>本地工作区删除文件 <code>rm file1.txt</code></li> <li>暂存区更新 <code>git add file1.txt</code></li> <li>仓库更新</li></ol> <p><code>git rm file1.txt</code> 从本地工作区删除文件 <code>file1.txt</code> 并添加到暂存区，即把上面两步合并为一个步骤</p> <p><code>git rm --catched file1.txt</code>
+把文件从暂存区删除，但保留在工作区</p> <h2 id="gitignore"><a href="#gitignore" class="header-anchor">#</a> .gitignore</h2> <h2 id="ssh-配置和克隆仓库"><a href="#ssh-配置和克隆仓库" class="header-anchor">#</a> SSH 配置和克隆仓库</h2> <p>Https 把本地仓库代码 push 到远程仓库时，需要验证用户名和密码
+SSH 不需要验证用户名密码，但需要在远程仓库上添加 SSH 公钥的配置</p> <h3 id="配置-ssh-密钥"><a href="#配置-ssh-密钥" class="header-anchor">#</a> 配置 SSH 密钥</h3> <p><code>ssh-keygen</code> 创建 ssh 密钥对</p> <p><code>.pub</code> 为公钥文件
+为远程仓库配置公钥</p> <h2 id="关联本地仓库和远程仓库"><a href="#关联本地仓库和远程仓库" class="header-anchor">#</a> 关联本地仓库和远程仓库</h2> <p><code>git remote add &lt;shortname&gt; &lt;url&gt;</code>
+添加一个远程仓库，<code>shortname</code> 为远程仓库别名，默认为 <code>origin</code>。</p> <p><code>git remote -v</code>
+查看当前仓库所对应的远程仓库的别名和地址</p> <p><code>git push -u origin master:master</code></p> <p>将本地仓库和别名为 origin 的远程仓库关联，把本地仓库的 master 分支推送给远程仓库的 master</p> <p>当分支名相同时，可省略<code>:master</code></p> <p>当远程仓库发生更改时，使用 <code>git pull</code></p> <p>把远程仓库的指定分支拉取到本地并合并</p> <p><code>git pull &lt;远程仓库名&gt; &lt;远程分支名&gt;：&lt;本地分支名&gt;</code></p> <p>默认值为 <code>git pull orgin master:master</code></p> <p><code>source tree</code></p> <h2 id="分支"><a href="#分支" class="header-anchor">#</a> 分支</h2> <p><code>git branch</code> 查看当前仓库的所有分支</p> <p><code>git branch 分支名</code> 创建一个新的分支</p> <p><code>git checkout 分支名</code> 切换到不同分支</p> <p><code>git checkout 文件名</code> 将文件恢复到修改前的状态</p> <p>避免文件名和分支名相同</p> <p>新的切换分支命令
+<code>git switch 分支名</code></p> <p><code>git merge</code> 合并分支</p> <p><code>git marge xxx</code> 将 xxx 分支合并到当前分支，合并后会自动提交到仓库</p> <p>分支被合并后依然会存在，如果需要删除</p> <p><code>git brance -d 分支名</code> 删除分支，只有当这个分支被合并后，才能用此法删除</p> <p><code>git brance -D 分支名</code> 强行删除分支</p> <p><code>git log --oneline --graph --decorate --all</code> 查看分支图</p> <p>使用 <code>alias graph = &quot;git log --oneline --graph --decorate --all&quot;</code>
+这样使用 <code>graph</code> 就可以查看分支</p> <h2 id="解决合并冲突"><a href="#解决合并冲突" class="header-anchor">#</a> 解决合并冲突</h2> <p>两个分支修改相同文件的内容后，合并分支会产生冲突</p> <p>这时，这个文件会保留两次修改的内容，手动编辑文件，完成后重新提交，提交后会自动完成合并过程。</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.71d0a6ab.js" defer></script><script src="/assets/js/2.88ecbf0a.js" defer></script><script src="/assets/js/1.ade45e35.js" defer></script><script src="/assets/js/24.1e34847f.js" defer></script>
+  </body>
+</html>

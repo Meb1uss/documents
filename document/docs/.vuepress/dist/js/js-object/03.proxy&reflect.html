@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Proxy 和 Reflect | ∞</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="icon" href="/favicon.png">
+    <meta name="description" content="技术博客">
+    
+    <link rel="preload" href="/assets/css/0.styles.9f84806b.css" as="style"><link rel="preload" href="/assets/js/app.71d0a6ab.js" as="script"><link rel="preload" href="/assets/js/2.88ecbf0a.js" as="script"><link rel="preload" href="/assets/js/1.ade45e35.js" as="script"><link rel="preload" href="/assets/js/44.696a43e1.js" as="script"><link rel="prefetch" href="/assets/js/10.7f64196e.js"><link rel="prefetch" href="/assets/js/11.6f3e8bd7.js"><link rel="prefetch" href="/assets/js/12.63636d74.js"><link rel="prefetch" href="/assets/js/13.986a1a7a.js"><link rel="prefetch" href="/assets/js/14.7f1f2d89.js"><link rel="prefetch" href="/assets/js/15.e4ed6557.js"><link rel="prefetch" href="/assets/js/16.bd1a48f3.js"><link rel="prefetch" href="/assets/js/17.20da9bf2.js"><link rel="prefetch" href="/assets/js/18.a938f922.js"><link rel="prefetch" href="/assets/js/19.e3754cca.js"><link rel="prefetch" href="/assets/js/20.24f07836.js"><link rel="prefetch" href="/assets/js/21.3fc53ab6.js"><link rel="prefetch" href="/assets/js/22.6901d844.js"><link rel="prefetch" href="/assets/js/23.ca182cb0.js"><link rel="prefetch" href="/assets/js/24.1e34847f.js"><link rel="prefetch" href="/assets/js/25.39b2c957.js"><link rel="prefetch" href="/assets/js/26.9cb068f4.js"><link rel="prefetch" href="/assets/js/27.0d585e24.js"><link rel="prefetch" href="/assets/js/28.24cffcc2.js"><link rel="prefetch" href="/assets/js/29.4d2081bd.js"><link rel="prefetch" href="/assets/js/3.8183d830.js"><link rel="prefetch" href="/assets/js/30.de2bf18b.js"><link rel="prefetch" href="/assets/js/31.8803f23f.js"><link rel="prefetch" href="/assets/js/32.12037825.js"><link rel="prefetch" href="/assets/js/33.ac2ea6a2.js"><link rel="prefetch" href="/assets/js/34.fc22af2f.js"><link rel="prefetch" href="/assets/js/35.115dccf6.js"><link rel="prefetch" href="/assets/js/36.d68a25c5.js"><link rel="prefetch" href="/assets/js/37.940f427a.js"><link rel="prefetch" href="/assets/js/38.58a0592d.js"><link rel="prefetch" href="/assets/js/39.3eac0241.js"><link rel="prefetch" href="/assets/js/4.722a3bb4.js"><link rel="prefetch" href="/assets/js/40.7d238259.js"><link rel="prefetch" href="/assets/js/41.8c2fbdb3.js"><link rel="prefetch" href="/assets/js/42.682cee9c.js"><link rel="prefetch" href="/assets/js/43.d132570c.js"><link rel="prefetch" href="/assets/js/45.fd384626.js"><link rel="prefetch" href="/assets/js/46.ca023eb1.js"><link rel="prefetch" href="/assets/js/47.e597e295.js"><link rel="prefetch" href="/assets/js/48.7d4de1cb.js"><link rel="prefetch" href="/assets/js/49.5dee4bfe.js"><link rel="prefetch" href="/assets/js/5.998f9103.js"><link rel="prefetch" href="/assets/js/50.b03bbbbb.js"><link rel="prefetch" href="/assets/js/51.c5e0fcaf.js"><link rel="prefetch" href="/assets/js/52.887b2039.js"><link rel="prefetch" href="/assets/js/53.a70c4a8a.js"><link rel="prefetch" href="/assets/js/54.b7559b6a.js"><link rel="prefetch" href="/assets/js/55.83741f26.js"><link rel="prefetch" href="/assets/js/56.8832b8cc.js"><link rel="prefetch" href="/assets/js/57.b34ada6b.js"><link rel="prefetch" href="/assets/js/58.c0c4f6d8.js"><link rel="prefetch" href="/assets/js/59.8a67ecd3.js"><link rel="prefetch" href="/assets/js/6.ec5040da.js"><link rel="prefetch" href="/assets/js/60.657d4d40.js"><link rel="prefetch" href="/assets/js/61.5fce9f3b.js"><link rel="prefetch" href="/assets/js/62.bedfb4c7.js"><link rel="prefetch" href="/assets/js/63.718b4388.js"><link rel="prefetch" href="/assets/js/64.7206788b.js"><link rel="prefetch" href="/assets/js/65.341d0bae.js"><link rel="prefetch" href="/assets/js/66.c227fe91.js"><link rel="prefetch" href="/assets/js/67.d60d199a.js"><link rel="prefetch" href="/assets/js/68.51012513.js"><link rel="prefetch" href="/assets/js/69.7590adc2.js"><link rel="prefetch" href="/assets/js/7.1276edb2.js"><link rel="prefetch" href="/assets/js/70.046b40ac.js"><link rel="prefetch" href="/assets/js/71.296c2c8c.js"><link rel="prefetch" href="/assets/js/72.02face10.js"><link rel="prefetch" href="/assets/js/73.e7f08eef.js"><link rel="prefetch" href="/assets/js/74.8febeb58.js"><link rel="prefetch" href="/assets/js/75.ef9c348c.js"><link rel="prefetch" href="/assets/js/76.6dd69548.js"><link rel="prefetch" href="/assets/js/77.04446c75.js"><link rel="prefetch" href="/assets/js/78.bfeeea87.js"><link rel="prefetch" href="/assets/js/79.076a0cab.js"><link rel="prefetch" href="/assets/js/80.7b9e8313.js"><link rel="prefetch" href="/assets/js/81.34debb7b.js"><link rel="prefetch" href="/assets/js/82.a78018c2.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.4f1414c9.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.9f84806b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/favicon.png" alt="∞" class="logo"> <span class="site-name can-hide">∞</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JavaScript" class="dropdown-title"><span class="title">JavaScript</span> <span class="arrow down"></span></button> <button type="button" aria-label="JavaScript" class="mobile-dropdown-title"><span class="title">JavaScript</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/js/js-basic/01.variable.html" class="nav-link">
+  JavsScript基础
+</a></li><li class="dropdown-item"><!----> <a href="/js/js-object-basic/01.objcet.html" class="nav-link">
+  对象基础
+</a></li><li class="dropdown-item"><!----> <a href="/js/js-types/01.number.html" class="nav-link">
+  数据类型
+</a></li><li class="dropdown-item"><!----> <a href="/js/js-function/01.closure.html" class="nav-link">
+  函数进阶
+</a></li><li class="dropdown-item"><!----> <a href="/js/js-object/01.property.html" class="nav-link">
+  对象属性配置
+</a></li><li class="dropdown-item"><!----> <a href="/js/js-prototype/01.prototype.html" class="nav-link">
+  原型，继承
+</a></li><li class="dropdown-item"><!----> <a href="/js/js-class/01.class.html" class="nav-link">
+  类
+</a></li><li class="dropdown-item"><!----> <a href="/js/js-promise/01.promise.html" class="nav-link">
+  Promise
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="CSS" class="dropdown-title"><span class="title">CSS</span> <span class="arrow down"></span></button> <button type="button" aria-label="CSS" class="mobile-dropdown-title"><span class="title">CSS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          布局
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/css/layout/float.html" class="nav-link">
+  Float 父元素高度塌陷
+</a></li><li class="dropdown-subitem"><a href="/css/layout/flex.html" class="nav-link">
+  Flex 基本使用
+</a></li><li class="dropdown-subitem"><a href="/css/layout/grid.html" class="nav-link">
+  Grid 基本使用
+</a></li><li class="dropdown-subitem"><a href="/css/layout/responsive.html" class="nav-link">
+  响应式布局
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Vue" class="dropdown-title"><span class="title">Vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="Vue" class="mobile-dropdown-title"><span class="title">Vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Vue基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/vue-basic/reactivity.html" class="nav-link">
+  响应式原理
+</a></li><li class="dropdown-subitem"><a href="/vue/vue-basic/vue-basic.html" class="nav-link">
+  Vue配置项
+</a></li><li class="dropdown-subitem"><a href="/vue/vue-basic/class&amp;style.html" class="nav-link">
+  Class绑定
+</a></li><li class="dropdown-subitem"><a href="/vue/vue-basic/v-if&amp;v-show.html" class="nav-link">
+  条件渲染
+</a></li><li class="dropdown-subitem"><a href="/vue/vue-basic/Vue-lifecycle.html" class="nav-link">
+  生命周期
+</a></li><li class="dropdown-subitem"><a href="/vue/vue-basic/component.html" class="nav-link">
+  组件基本使用
+</a></li><li class="dropdown-subitem"><a href="/vue/vue-basic/communication.html" class="nav-link">
+  组件传值
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vue-router
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/vuerouter/vue-router-basic.html" class="nav-link">
+  基本使用
+</a></li><li class="dropdown-subitem"><a href="/vue/vuerouter/params&amp;query.html" class="nav-link">
+  动态路由匹配
+</a></li><li class="dropdown-subitem"><a href="/vue/vuerouter/navigation.html" class="nav-link">
+  编程式导航
+</a></li></ul></li><li class="dropdown-item"><h4>
+          组合式API
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/composition/setup.html" class="nav-link">
+  setup
+</a></li><li class="dropdown-subitem"><a href="/vue/composition/ref&amp;reactive.html" class="nav-link">
+  响应式数据
+</a></li><li class="dropdown-subitem"><a href="/vue/composition/computed.html" class="nav-link">
+  computed
+</a></li><li class="dropdown-subitem"><a href="/vue/composition/watch.html" class="nav-link">
+  watch
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Pinia
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/pinia/pinia.html" class="nav-link">
+  pinia基本使用
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/tools/git.html" class="nav-link">
+  工具
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JavaScript" class="dropdown-title"><span class="title">JavaScript</span> <span class="arrow down"></span></button> <button type="button" aria-label="JavaScript" class="mobile-dropdown-title"><span class="title">JavaScript</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/js/js-basic/01.variable.html" class="nav-link">
+  JavsScript基础
+</a></li><li class="dropdown-item"><!----> <a href="/js/js-object-basic/01.objcet.html" class="nav-link">
+  对象基础
+</a></li><li class="dropdown-item"><!----> <a href="/js/js-types/01.number.html" class="nav-link">
+  数据类型
+</a></li><li class="dropdown-item"><!----> <a href="/js/js-function/01.closure.html" class="nav-link">
+  函数进阶
+</a></li><li class="dropdown-item"><!----> <a href="/js/js-object/01.property.html" class="nav-link">
+  对象属性配置
+</a></li><li class="dropdown-item"><!----> <a href="/js/js-prototype/01.prototype.html" class="nav-link">
+  原型，继承
+</a></li><li class="dropdown-item"><!----> <a href="/js/js-class/01.class.html" class="nav-link">
+  类
+</a></li><li class="dropdown-item"><!----> <a href="/js/js-promise/01.promise.html" class="nav-link">
+  Promise
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="CSS" class="dropdown-title"><span class="title">CSS</span> <span class="arrow down"></span></button> <button type="button" aria-label="CSS" class="mobile-dropdown-title"><span class="title">CSS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          布局
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/css/layout/float.html" class="nav-link">
+  Float 父元素高度塌陷
+</a></li><li class="dropdown-subitem"><a href="/css/layout/flex.html" class="nav-link">
+  Flex 基本使用
+</a></li><li class="dropdown-subitem"><a href="/css/layout/grid.html" class="nav-link">
+  Grid 基本使用
+</a></li><li class="dropdown-subitem"><a href="/css/layout/responsive.html" class="nav-link">
+  响应式布局
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Vue" class="dropdown-title"><span class="title">Vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="Vue" class="mobile-dropdown-title"><span class="title">Vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Vue基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/vue-basic/reactivity.html" class="nav-link">
+  响应式原理
+</a></li><li class="dropdown-subitem"><a href="/vue/vue-basic/vue-basic.html" class="nav-link">
+  Vue配置项
+</a></li><li class="dropdown-subitem"><a href="/vue/vue-basic/class&amp;style.html" class="nav-link">
+  Class绑定
+</a></li><li class="dropdown-subitem"><a href="/vue/vue-basic/v-if&amp;v-show.html" class="nav-link">
+  条件渲染
+</a></li><li class="dropdown-subitem"><a href="/vue/vue-basic/Vue-lifecycle.html" class="nav-link">
+  生命周期
+</a></li><li class="dropdown-subitem"><a href="/vue/vue-basic/component.html" class="nav-link">
+  组件基本使用
+</a></li><li class="dropdown-subitem"><a href="/vue/vue-basic/communication.html" class="nav-link">
+  组件传值
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vue-router
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/vuerouter/vue-router-basic.html" class="nav-link">
+  基本使用
+</a></li><li class="dropdown-subitem"><a href="/vue/vuerouter/params&amp;query.html" class="nav-link">
+  动态路由匹配
+</a></li><li class="dropdown-subitem"><a href="/vue/vuerouter/navigation.html" class="nav-link">
+  编程式导航
+</a></li></ul></li><li class="dropdown-item"><h4>
+          组合式API
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/composition/setup.html" class="nav-link">
+  setup
+</a></li><li class="dropdown-subitem"><a href="/vue/composition/ref&amp;reactive.html" class="nav-link">
+  响应式数据
+</a></li><li class="dropdown-subitem"><a href="/vue/composition/computed.html" class="nav-link">
+  computed
+</a></li><li class="dropdown-subitem"><a href="/vue/composition/watch.html" class="nav-link">
+  watch
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Pinia
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/pinia/pinia.html" class="nav-link">
+  pinia基本使用
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/tools/git.html" class="nav-link">
+  工具
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>JavaScript基础</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/js/js-basic/01.variable.html" class="sidebar-link">变量与数据类型</a></li><li><a href="/js/js-basic/02.function.html" class="sidebar-link">函数</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>对象基础</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/js/js-object-basic/01.objcet.html" class="sidebar-link">对象</a></li><li><a href="/js/js-object-basic/02.object-copy.html" class="sidebar-link">克隆对象</a></li><li><a href="/js/js-object-basic/03.this.html" class="sidebar-link">方法， “this”</a></li><li><a href="/js/js-object-basic/04.new.html" class="sidebar-link">构造函数创建对象</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>数据类型</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/js/js-types/01.number.html" class="sidebar-link">数字类型</a></li><li><a href="/js/js-types/02.string.html" class="sidebar-link">字符串</a></li><li><a href="/js/js-types/03.array.html" class="sidebar-link">数组</a></li><li><a href="/js/js-types/04.array-methods.html" class="sidebar-link">数组方法</a></li><li><a href="/js/js-types/05.set&amp;map.html" class="sidebar-link">Set 和 Map</a></li><li><a href="/js/js-types/06.destructuring.html" class="sidebar-link">解构赋值</a></li><li><a href="/js/js-types/07.rest&amp;....html" class="sidebar-link">扩展运算符和剩余模式</a></li><li><a href="/js/js-types/08.for...of.html" class="sidebar-link">for...of 遍历数组</a></li><li><a href="/js/js-types/09.object.value.html" class="sidebar-link">for...of 遍历对象</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>函数进阶</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/js/js-function/01.closure.html" class="sidebar-link">作用域链，闭包</a></li><li><a href="/js/js-function/02.var.html" class="sidebar-link">Var</a></li><li><a href="/js/js-function/03.call,apply,bind.html" class="sidebar-link">call/apply/bind</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>对象属性配置</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/js/js-object/01.property.html" class="sidebar-link">属性标志和属性描述符</a></li><li><a href="/js/js-object/02.getter&amp;setter.html" class="sidebar-link">访问器属性：getter 和 setter</a></li><li><a href="/js/js-object/03.proxy&amp;reflect.html" aria-current="page" class="active sidebar-link">Proxy 和 Reflect</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/js/js-object/03.proxy&amp;reflect.html#proxy" class="sidebar-link">Proxy</a></li><li class="sidebar-sub-header"><a href="/js/js-object/03.proxy&amp;reflect.html#reflect" class="sidebar-link">Reflect</a></li></ul></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>类</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/js/js-class/01.class.html" class="sidebar-link">class</a></li><li><a href="/js/js-class/02.class-extend.html" class="sidebar-link">类继承</a></li><li><a href="/js/js-class/03.class-static.html" class="sidebar-link">静态方法</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Promise</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/js/js-promise/01.promise.html" class="sidebar-link">Promise</a></li><li><a href="/js/js-promise/02.promise-chgining.html" class="sidebar-link">Promise 链</a></li><li><a href="/js/js-promise/03.promise-methods.html" class="sidebar-link">Promise API</a></li><li><a href="/js/js-promise/04.async&amp;await.html" class="sidebar-link">async/await</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="proxy-和-reflect"><a href="#proxy-和-reflect" class="header-anchor">#</a> Proxy 和 Reflect</h1> <h2 id="proxy"><a href="#proxy" class="header-anchor">#</a> Proxy</h2> <p><code>Proxy</code> 对象用于代理另一个对象，且拦截对该对象的属性的诸如增删改查的操作。</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">let</span> proxy <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Proxy</span><span class="token punctuation">(</span>target<span class="token punctuation">,</span> handler<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ul><li><code>target</code> —— 要代理的对象</li> <li><code>handler</code> —— 带有拦截器的对象，如用 <code>get</code> 拦截读取 <code>target</code>，用 <code>set</code> 拦截写入 <code>target</code> 属性</li></ul> <p>对 <code>proxy</code> 对象的操作，都会经过 <code>handler</code> 内相应的拦截器处理，反映在 <code>target</code> 身上。</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">const</span> user <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">&quot;张三&quot;</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">age</span><span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token comment">// 空的 handler 对象</span>
+<span class="token keyword">const</span> proxy <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Proxy</span><span class="token punctuation">(</span>user<span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+proxy<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">&quot;李四&quot;</span><span class="token punctuation">;</span>
+proxy<span class="token punctuation">.</span>age <span class="token operator">=</span> <span class="token number">30</span><span class="token punctuation">;</span>
+proxy<span class="token punctuation">.</span>gender <span class="token operator">=</span> <span class="token string">&quot;male&quot;</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>user<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// {name: '李四', age: 30, gender: 'male'}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>如果 <code>handler</code> 对象为空（没有拦截器），则对 <code>proxy</code> 的操作会直接作用在 <code>target</code> 上。</p> <h3 id="get"><a href="#get" class="header-anchor">#</a> get</h3> <p>要拦截对 <code>target</code> 属性的读取，<code>handler</code> 应该有 <code>get(target, property)</code> 方法</p> <ul><li><code>target</code> — 目标对象</li> <li><code>property</code> —— 目标属性名</li></ul> <p>可以使用 <code>get</code> 完成对 <code>target</code> 的默认值设置</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">let</span> user <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">&quot;张三&quot;</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+user <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Proxy</span><span class="token punctuation">(</span>user<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token comment">//拦截读取属性操作</span>
+  <span class="token function">get</span><span class="token punctuation">(</span>target<span class="token punctuation">,</span> prop<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//如果对象中有此属性</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>prop <span class="token keyword">in</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 返回它的值</span>
+      <span class="token keyword">return</span> target<span class="token punctuation">[</span>prop<span class="token punctuation">]</span><span class="token punctuation">;</span>
+      <span class="token comment">// 如果没有此属性，且属性名是 age</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>prop <span class="token operator">===</span> <span class="token string">&quot;age&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 返回 18</span>
+      <span class="token keyword">return</span> <span class="token number">18</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>user<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// '张三'</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>user<span class="token punctuation">.</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 18</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div><p>当执行读取<code>target</code> 的 <code>prop</code> 属性的操作时：</p> <ul><li>如果 <code>target</code> 有 <code>prop</code> 属性
+<ul><li>输出 <code>target</code> 的 <code>prop</code> 属性</li></ul></li> <li>如果没有，且属性名为 <code>age</code> <ul><li>输出 <code>18</code></li></ul></li></ul> <h3 id="set"><a href="#set" class="header-anchor">#</a> set</h3> <p>要拦截对 <code>target</code> 属性的写入操作，<code>handler</code> 应该有 <code>set(target, property, value)</code> 方法</p> <ul><li><code>target</code> — 目标对象</li> <li><code>property</code> —— 目标属性名</li> <li><code>value</code> —— 目标属性的值
+如果写入成功，<code>set</code> 应该返回 <code>true</code> ，如果写入失败，返回 <code>false</code>（触发 error）</li></ul> <p>可以用 <code>set</code> 设置一个元素只能是数字的数组</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">let</span> numbers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+numbers <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Proxy</span><span class="token punctuation">(</span>numbers<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token function">set</span><span class="token punctuation">(</span>target<span class="token punctuation">,</span> prop<span class="token punctuation">,</span> value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> value <span class="token operator">===</span> <span class="token string">&quot;number&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      target<span class="token punctuation">[</span>prop<span class="token punctuation">]</span> <span class="token operator">=</span> value<span class="token punctuation">;</span>
+      <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+numbers<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token number">32</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>numbers<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Proxy(Array) {0: 1, 1: 2, 2: 3, 3: 32}</span>
+
+numbers<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">&quot;123&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// TypeError: 'set' on proxy: trap returned falsish for property '4'</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><div class="custom-block warning"><p class="custom-block-title">WARNING</p> <p>对于 <code>set</code> 操作，它必须在成功写入时返回 <code>true</code>，不然会触发 <code>TypeError</code> 错误</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">let</span> numbers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+numbers <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Proxy</span><span class="token punctuation">(</span>numbers<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token function">set</span><span class="token punctuation">(</span>target<span class="token punctuation">,</span> prop<span class="token punctuation">,</span> value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> value <span class="token operator">===</span> <span class="token string">&quot;number&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      target<span class="token punctuation">[</span>prop<span class="token punctuation">]</span> <span class="token operator">=</span> value<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+numbers<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token number">32</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// TypeError</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div></div> <h3 id="deleteproperty"><a href="#deleteproperty" class="header-anchor">#</a> deleteProperty</h3> <p>要拦截对 <code>target</code> 属性的删除操作，<code>handler</code> 应该有 <code>deleteProperty(target, property)</code> 方法</p> <p>设置 <code>user.id</code> 为不可删除的属性</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">let</span> user <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">&quot;张三&quot;</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token string">&quot;001&quot;</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+user <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Proxy</span><span class="token punctuation">(</span>user<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token function">deleteProperty</span><span class="token punctuation">(</span><span class="token parameter">target<span class="token punctuation">,</span> property</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>property <span class="token operator">===</span> <span class="token string">&quot;id&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token keyword">delete</span> target<span class="token punctuation">[</span>property<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">delete</span> user<span class="token punctuation">.</span>id<span class="token punctuation">;</span> <span class="token comment">// false</span>
+<span class="token keyword">delete</span> user<span class="token punctuation">.</span>name<span class="token punctuation">;</span> <span class="token comment">// 有效</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>user<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Proxy(Object) {id: '001'}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><h2 id="reflect"><a href="#reflect" class="header-anchor">#</a> Reflect</h2> <p><code>Reflect</code> 是一个内建对象，可以简化 <code>Proxy</code> 的创建。</p> <p>对于每个可被 <code>Proxy</code> 捕获的内部方法，在 <code>Reflect</code> 中都有一个对应的方法，其名称和参数与 <code>Proxy</code> 捕捉器相同。
+使用 <code>Reflect</code> 将操作 “反射” 给原始对象</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">let</span> user <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">&quot;张三&quot;</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+user <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Proxy</span><span class="token punctuation">(</span>user<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token function">get</span><span class="token punctuation">(</span>target<span class="token punctuation">,</span> prop<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;查&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> Reflect<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>target<span class="token punctuation">,</span> prop<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">set</span><span class="token punctuation">(</span>target<span class="token punctuation">,</span> prop<span class="token punctuation">,</span> val<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;增/改&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> Reflect<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span>target<span class="token punctuation">,</span> prop<span class="token punctuation">,</span> val<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">deleteProperty</span><span class="token punctuation">(</span><span class="token parameter">target<span class="token punctuation">,</span> prop</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;删&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> Reflect<span class="token punctuation">.</span><span class="token function">deleteProperty</span><span class="token punctuation">(</span>target<span class="token punctuation">,</span> prop<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/js/js-object/02.getter&amp;setter.html" class="prev">
+        访问器属性：getter 和 setter
+      </a></span> <span class="next"><a href="/js/js-class/01.class.html">
+        class
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.71d0a6ab.js" defer></script><script src="/assets/js/2.88ecbf0a.js" defer></script><script src="/assets/js/1.ade45e35.js" defer></script><script src="/assets/js/44.696a43e1.js" defer></script>
+  </body>
+</html>

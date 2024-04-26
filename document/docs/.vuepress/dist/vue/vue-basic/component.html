@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>组件基本使用 | ∞</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="icon" href="/favicon.png">
+    <meta name="description" content="技术博客">
+    
+    <link rel="preload" href="/assets/css/0.styles.9f84806b.css" as="style"><link rel="preload" href="/assets/js/app.71d0a6ab.js" as="script"><link rel="preload" href="/assets/js/2.88ecbf0a.js" as="script"><link rel="preload" href="/assets/js/1.ade45e35.js" as="script"><link rel="preload" href="/assets/js/72.02face10.js" as="script"><link rel="prefetch" href="/assets/js/10.7f64196e.js"><link rel="prefetch" href="/assets/js/11.6f3e8bd7.js"><link rel="prefetch" href="/assets/js/12.63636d74.js"><link rel="prefetch" href="/assets/js/13.986a1a7a.js"><link rel="prefetch" href="/assets/js/14.7f1f2d89.js"><link rel="prefetch" href="/assets/js/15.e4ed6557.js"><link rel="prefetch" href="/assets/js/16.bd1a48f3.js"><link rel="prefetch" href="/assets/js/17.20da9bf2.js"><link rel="prefetch" href="/assets/js/18.a938f922.js"><link rel="prefetch" href="/assets/js/19.e3754cca.js"><link rel="prefetch" href="/assets/js/20.24f07836.js"><link rel="prefetch" href="/assets/js/21.3fc53ab6.js"><link rel="prefetch" href="/assets/js/22.6901d844.js"><link rel="prefetch" href="/assets/js/23.ca182cb0.js"><link rel="prefetch" href="/assets/js/24.1e34847f.js"><link rel="prefetch" href="/assets/js/25.39b2c957.js"><link rel="prefetch" href="/assets/js/26.9cb068f4.js"><link rel="prefetch" href="/assets/js/27.0d585e24.js"><link rel="prefetch" href="/assets/js/28.24cffcc2.js"><link rel="prefetch" href="/assets/js/29.4d2081bd.js"><link rel="prefetch" href="/assets/js/3.8183d830.js"><link rel="prefetch" href="/assets/js/30.de2bf18b.js"><link rel="prefetch" href="/assets/js/31.8803f23f.js"><link rel="prefetch" href="/assets/js/32.12037825.js"><link rel="prefetch" href="/assets/js/33.ac2ea6a2.js"><link rel="prefetch" href="/assets/js/34.fc22af2f.js"><link rel="prefetch" href="/assets/js/35.115dccf6.js"><link rel="prefetch" href="/assets/js/36.d68a25c5.js"><link rel="prefetch" href="/assets/js/37.940f427a.js"><link rel="prefetch" href="/assets/js/38.58a0592d.js"><link rel="prefetch" href="/assets/js/39.3eac0241.js"><link rel="prefetch" href="/assets/js/4.722a3bb4.js"><link rel="prefetch" href="/assets/js/40.7d238259.js"><link rel="prefetch" href="/assets/js/41.8c2fbdb3.js"><link rel="prefetch" href="/assets/js/42.682cee9c.js"><link rel="prefetch" href="/assets/js/43.d132570c.js"><link rel="prefetch" href="/assets/js/44.696a43e1.js"><link rel="prefetch" href="/assets/js/45.fd384626.js"><link rel="prefetch" href="/assets/js/46.ca023eb1.js"><link rel="prefetch" href="/assets/js/47.e597e295.js"><link rel="prefetch" href="/assets/js/48.7d4de1cb.js"><link rel="prefetch" href="/assets/js/49.5dee4bfe.js"><link rel="prefetch" href="/assets/js/5.998f9103.js"><link rel="prefetch" href="/assets/js/50.b03bbbbb.js"><link rel="prefetch" href="/assets/js/51.c5e0fcaf.js"><link rel="prefetch" href="/assets/js/52.887b2039.js"><link rel="prefetch" href="/assets/js/53.a70c4a8a.js"><link rel="prefetch" href="/assets/js/54.b7559b6a.js"><link rel="prefetch" href="/assets/js/55.83741f26.js"><link rel="prefetch" href="/assets/js/56.8832b8cc.js"><link rel="prefetch" href="/assets/js/57.b34ada6b.js"><link rel="prefetch" href="/assets/js/58.c0c4f6d8.js"><link rel="prefetch" href="/assets/js/59.8a67ecd3.js"><link rel="prefetch" href="/assets/js/6.ec5040da.js"><link rel="prefetch" href="/assets/js/60.657d4d40.js"><link rel="prefetch" href="/assets/js/61.5fce9f3b.js"><link rel="prefetch" href="/assets/js/62.bedfb4c7.js"><link rel="prefetch" href="/assets/js/63.718b4388.js"><link rel="prefetch" href="/assets/js/64.7206788b.js"><link rel="prefetch" href="/assets/js/65.341d0bae.js"><link rel="prefetch" href="/assets/js/66.c227fe91.js"><link rel="prefetch" href="/assets/js/67.d60d199a.js"><link rel="prefetch" href="/assets/js/68.51012513.js"><link rel="prefetch" href="/assets/js/69.7590adc2.js"><link rel="prefetch" href="/assets/js/7.1276edb2.js"><link rel="prefetch" href="/assets/js/70.046b40ac.js"><link rel="prefetch" href="/assets/js/71.296c2c8c.js"><link rel="prefetch" href="/assets/js/73.e7f08eef.js"><link rel="prefetch" href="/assets/js/74.8febeb58.js"><link rel="prefetch" href="/assets/js/75.ef9c348c.js"><link rel="prefetch" href="/assets/js/76.6dd69548.js"><link rel="prefetch" href="/assets/js/77.04446c75.js"><link rel="prefetch" href="/assets/js/78.bfeeea87.js"><link rel="prefetch" href="/assets/js/79.076a0cab.js"><link rel="prefetch" href="/assets/js/80.7b9e8313.js"><link rel="prefetch" href="/assets/js/81.34debb7b.js"><link rel="prefetch" href="/assets/js/82.a78018c2.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.4f1414c9.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.9f84806b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/favicon.png" alt="∞" class="logo"> <span class="site-name can-hide">∞</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JavaScript" class="dropdown-title"><span class="title">JavaScript</span> <span class="arrow down"></span></button> <button type="button" aria-label="JavaScript" class="mobile-dropdown-title"><span class="title">JavaScript</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/js/js-basic/01.variable.html" class="nav-link">
+  JavsScript基础
+</a></li><li class="dropdown-item"><!----> <a href="/js/js-object-basic/01.objcet.html" class="nav-link">
+  对象基础
+</a></li><li class="dropdown-item"><!----> <a href="/js/js-types/01.number.html" class="nav-link">
+  数据类型
+</a></li><li class="dropdown-item"><!----> <a href="/js/js-function/01.closure.html" class="nav-link">
+  函数进阶
+</a></li><li class="dropdown-item"><!----> <a href="/js/js-object/01.property.html" class="nav-link">
+  对象属性配置
+</a></li><li class="dropdown-item"><!----> <a href="/js/js-prototype/01.prototype.html" class="nav-link">
+  原型，继承
+</a></li><li class="dropdown-item"><!----> <a href="/js/js-class/01.class.html" class="nav-link">
+  类
+</a></li><li class="dropdown-item"><!----> <a href="/js/js-promise/01.promise.html" class="nav-link">
+  Promise
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="CSS" class="dropdown-title"><span class="title">CSS</span> <span class="arrow down"></span></button> <button type="button" aria-label="CSS" class="mobile-dropdown-title"><span class="title">CSS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          布局
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/css/layout/float.html" class="nav-link">
+  Float 父元素高度塌陷
+</a></li><li class="dropdown-subitem"><a href="/css/layout/flex.html" class="nav-link">
+  Flex 基本使用
+</a></li><li class="dropdown-subitem"><a href="/css/layout/grid.html" class="nav-link">
+  Grid 基本使用
+</a></li><li class="dropdown-subitem"><a href="/css/layout/responsive.html" class="nav-link">
+  响应式布局
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Vue" class="dropdown-title"><span class="title">Vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="Vue" class="mobile-dropdown-title"><span class="title">Vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Vue基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/vue-basic/reactivity.html" class="nav-link">
+  响应式原理
+</a></li><li class="dropdown-subitem"><a href="/vue/vue-basic/vue-basic.html" class="nav-link">
+  Vue配置项
+</a></li><li class="dropdown-subitem"><a href="/vue/vue-basic/class&amp;style.html" class="nav-link">
+  Class绑定
+</a></li><li class="dropdown-subitem"><a href="/vue/vue-basic/v-if&amp;v-show.html" class="nav-link">
+  条件渲染
+</a></li><li class="dropdown-subitem"><a href="/vue/vue-basic/Vue-lifecycle.html" class="nav-link">
+  生命周期
+</a></li><li class="dropdown-subitem"><a href="/vue/vue-basic/component.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  组件基本使用
+</a></li><li class="dropdown-subitem"><a href="/vue/vue-basic/communication.html" class="nav-link">
+  组件传值
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vue-router
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/vuerouter/vue-router-basic.html" class="nav-link">
+  基本使用
+</a></li><li class="dropdown-subitem"><a href="/vue/vuerouter/params&amp;query.html" class="nav-link">
+  动态路由匹配
+</a></li><li class="dropdown-subitem"><a href="/vue/vuerouter/navigation.html" class="nav-link">
+  编程式导航
+</a></li></ul></li><li class="dropdown-item"><h4>
+          组合式API
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/composition/setup.html" class="nav-link">
+  setup
+</a></li><li class="dropdown-subitem"><a href="/vue/composition/ref&amp;reactive.html" class="nav-link">
+  响应式数据
+</a></li><li class="dropdown-subitem"><a href="/vue/composition/computed.html" class="nav-link">
+  computed
+</a></li><li class="dropdown-subitem"><a href="/vue/composition/watch.html" class="nav-link">
+  watch
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Pinia
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/pinia/pinia.html" class="nav-link">
+  pinia基本使用
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/tools/git.html" class="nav-link">
+  工具
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JavaScript" class="dropdown-title"><span class="title">JavaScript</span> <span class="arrow down"></span></button> <button type="button" aria-label="JavaScript" class="mobile-dropdown-title"><span class="title">JavaScript</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/js/js-basic/01.variable.html" class="nav-link">
+  JavsScript基础
+</a></li><li class="dropdown-item"><!----> <a href="/js/js-object-basic/01.objcet.html" class="nav-link">
+  对象基础
+</a></li><li class="dropdown-item"><!----> <a href="/js/js-types/01.number.html" class="nav-link">
+  数据类型
+</a></li><li class="dropdown-item"><!----> <a href="/js/js-function/01.closure.html" class="nav-link">
+  函数进阶
+</a></li><li class="dropdown-item"><!----> <a href="/js/js-object/01.property.html" class="nav-link">
+  对象属性配置
+</a></li><li class="dropdown-item"><!----> <a href="/js/js-prototype/01.prototype.html" class="nav-link">
+  原型，继承
+</a></li><li class="dropdown-item"><!----> <a href="/js/js-class/01.class.html" class="nav-link">
+  类
+</a></li><li class="dropdown-item"><!----> <a href="/js/js-promise/01.promise.html" class="nav-link">
+  Promise
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="CSS" class="dropdown-title"><span class="title">CSS</span> <span class="arrow down"></span></button> <button type="button" aria-label="CSS" class="mobile-dropdown-title"><span class="title">CSS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          布局
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/css/layout/float.html" class="nav-link">
+  Float 父元素高度塌陷
+</a></li><li class="dropdown-subitem"><a href="/css/layout/flex.html" class="nav-link">
+  Flex 基本使用
+</a></li><li class="dropdown-subitem"><a href="/css/layout/grid.html" class="nav-link">
+  Grid 基本使用
+</a></li><li class="dropdown-subitem"><a href="/css/layout/responsive.html" class="nav-link">
+  响应式布局
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Vue" class="dropdown-title"><span class="title">Vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="Vue" class="mobile-dropdown-title"><span class="title">Vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Vue基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/vue-basic/reactivity.html" class="nav-link">
+  响应式原理
+</a></li><li class="dropdown-subitem"><a href="/vue/vue-basic/vue-basic.html" class="nav-link">
+  Vue配置项
+</a></li><li class="dropdown-subitem"><a href="/vue/vue-basic/class&amp;style.html" class="nav-link">
+  Class绑定
+</a></li><li class="dropdown-subitem"><a href="/vue/vue-basic/v-if&amp;v-show.html" class="nav-link">
+  条件渲染
+</a></li><li class="dropdown-subitem"><a href="/vue/vue-basic/Vue-lifecycle.html" class="nav-link">
+  生命周期
+</a></li><li class="dropdown-subitem"><a href="/vue/vue-basic/component.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  组件基本使用
+</a></li><li class="dropdown-subitem"><a href="/vue/vue-basic/communication.html" class="nav-link">
+  组件传值
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vue-router
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/vuerouter/vue-router-basic.html" class="nav-link">
+  基本使用
+</a></li><li class="dropdown-subitem"><a href="/vue/vuerouter/params&amp;query.html" class="nav-link">
+  动态路由匹配
+</a></li><li class="dropdown-subitem"><a href="/vue/vuerouter/navigation.html" class="nav-link">
+  编程式导航
+</a></li></ul></li><li class="dropdown-item"><h4>
+          组合式API
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/composition/setup.html" class="nav-link">
+  setup
+</a></li><li class="dropdown-subitem"><a href="/vue/composition/ref&amp;reactive.html" class="nav-link">
+  响应式数据
+</a></li><li class="dropdown-subitem"><a href="/vue/composition/computed.html" class="nav-link">
+  computed
+</a></li><li class="dropdown-subitem"><a href="/vue/composition/watch.html" class="nav-link">
+  watch
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Pinia
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/pinia/pinia.html" class="nav-link">
+  pinia基本使用
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/tools/git.html" class="nav-link">
+  工具
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Vue基础</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vue/vue-basic/reactivity.html" class="sidebar-link">Vue 响应式原理</a></li><li><a href="/vue/vue-basic/vue-basic.html" class="sidebar-link">Vue 基础</a></li><li><a href="/vue/vue-basic/class&amp;style.html" class="sidebar-link">Class 与 Style 绑定</a></li><li><a href="/vue/vue-basic/v-if&amp;v-show.html" class="sidebar-link">条件渲染</a></li><li><a href="/vue/vue-basic/Vue-lifecycle.html" class="sidebar-link">生命周期</a></li><li><a href="/vue/vue-basic/component.html" aria-current="page" class="active sidebar-link">组件基本使用</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vue/vue-basic/component.html#组件的好处" class="sidebar-link">组件的好处</a></li><li class="sidebar-sub-header"><a href="/vue/vue-basic/component.html#创建组件" class="sidebar-link">创建组件</a></li><li class="sidebar-sub-header"><a href="/vue/vue-basic/component.html#注册组件" class="sidebar-link">注册组件</a></li><li class="sidebar-sub-header"><a href="/vue/vue-basic/component.html#使用组件" class="sidebar-link">使用组件</a></li></ul></li><li><a href="/vue/vue-basic/communication.html" class="sidebar-link">组件通信</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Vue-Router</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vue/vuerouter/vue-router-basic.html" class="sidebar-link">Vue-router 基本使用</a></li><li><a href="/vue/vuerouter/params&amp;query.html" class="sidebar-link">动态路由匹配</a></li><li><a href="/vue/vuerouter/navigation.html" class="sidebar-link">编程式导航</a></li><li><a href="/vue/vuerouter/navigation-guards.html" class="sidebar-link">导航守卫</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>组合式API</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vue/composition/setup.html" class="sidebar-link">setup 概述</a></li><li><a href="/vue/composition/ref&amp;reactive.html" class="sidebar-link">ref 和 reactive</a></li><li><a href="/vue/composition/computed.html" class="sidebar-link">计算属性</a></li><li><a href="/vue/composition/watch.html" class="sidebar-link">watch</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Pinia</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vue/pinia/pinia.html" class="sidebar-link">Pinia 基本使用</a></li><li><a href="/vue/pinia/pinia-plugin-persistedstate.html" class="sidebar-link">Pinia 数据持久化</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="组件基本使用"><a href="#组件基本使用" class="header-anchor">#</a> 组件基本使用</h1> <h2 id="组件的好处"><a href="#组件的好处" class="header-anchor">#</a> 组件的好处</h2> <p>传统方式的问题</p> <ul><li>依赖混乱，不好维护</li> <li>代码复用率不高</li></ul> <p>组件使用分三步</p> <ul><li>创建组件</li> <li>注册组件</li> <li>使用组件</li></ul> <h2 id="创建组件"><a href="#创建组件" class="header-anchor">#</a> 创建组件</h2> <h3 id="单文件组件"><a href="#单文件组件" class="header-anchor">#</a> 单文件组件</h3> <p>将 Vue 组件单独定义在一个 <code>.vue</code> 文件中
+使用大驼峰命名或者<code>-</code>分割单词</p> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>{{msg}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+  <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+    <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">msg</span><span class="token operator">:</span> <span class="token string">&quot;Hello, World!&quot;</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>一个 Vue 组件以一个包含 Vue 特定选项的 JavaScript <strong>对象</strong>来定义。
+上面的例子使用默认导出的方式导出了它自己。</p> <h2 id="注册组件"><a href="#注册组件" class="header-anchor">#</a> 注册组件</h2> <h3 id="全局注册"><a href="#全局注册" class="header-anchor">#</a> 全局注册</h3> <p>使用 Vue 实例的 <code>.component</code> 方法注册。</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> createApp <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;vue&quot;</span><span class="token punctuation">;</span>
+<span class="token comment">// 导入组件</span>
+<span class="token keyword">import</span> MyComponent <span class="token keyword">from</span> <span class="token string">&quot;./App.vue&quot;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token function">createApp</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 全局注册</span>
+app<span class="token punctuation">.</span><span class="token function">component</span><span class="token punctuation">(</span><span class="token string">&quot;MyComponent&quot;</span><span class="token punctuation">,</span> MyComponent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>全局注册的组件，再任意地方都可以使用，不需要再导入。</p> <h3 id="局部注册"><a href="#局部注册" class="header-anchor">#</a> 局部注册</h3> <p>使用一个子组件之前，需要在父组件中导入它，假如上例的组件被放入 <code>components</code> 文件夹中的 <code>Gretting.vue</code> 中，在父组件中使用时:</p> <ul><li>首先需要导入组件</li></ul> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+  <span class="token comment">//导入组件</span>
+  <span class="token keyword">import</span> Greeting <span class="token keyword">from</span> <span class="token string">&quot;./components/Greeting.vue&quot;</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><ul><li>然后需要在父组件的 <code>components</code> 选项上注册组件，
+<code>components</code> 选项为一个对象：</li></ul> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+  <span class="token keyword">import</span> Greeting <span class="token keyword">from</span> <span class="token string">&quot;./components/Greeting.vue&quot;</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+    <span class="token comment">//注册组件</span>
+    <span class="token literal-property property">components</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      Gretting<span class="token punctuation">,</span>
+      <span class="token comment">// es6 语法，等价于 Gretting: Gretting</span>
+      <span class="token comment">// 其中 key 是组件的名， value 是创建组件时决定的（文件名</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><h2 id="使用组件"><a href="#使用组件" class="header-anchor">#</a> 使用组件</h2> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+  <span class="token keyword">import</span> Greeting <span class="token keyword">from</span> <span class="token string">&quot;./components/Greeting.vue&quot;</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+    <span class="token comment">//注册组件</span>
+    <span class="token literal-property property">components</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      Gretting<span class="token punctuation">,</span>
+      <span class="token comment">// es6 语法，等价于 Gretting: Gretting</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Gretting</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Gretting</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><p>在单文件组件中，推荐为子组件使用 <code>PascalCase</code> 的标签名</p> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p><code>PascalCase</code> 与驼峰命名法类似。驼峰命名法首字母小写，而 <code>PascalCase</code> 首字母大写</p> <p><code>firstsecond</code></p> <ul><li><code>firstSecond</code> —— 驼峰命名法</li> <li><code>FirstSecond</code> —— <code>PascalCase</code></li></ul></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/vue/vue-basic/Vue-lifecycle.html" class="prev">
+        生命周期
+      </a></span> <span class="next"><a href="/vue/vue-basic/communication.html">
+        组件通信
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.71d0a6ab.js" defer></script><script src="/assets/js/2.88ecbf0a.js" defer></script><script src="/assets/js/1.ade45e35.js" defer></script><script src="/assets/js/72.02face10.js" defer></script>
+  </body>
+</html>

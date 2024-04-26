@@ -1,4 +1,5 @@
 module.exports = {
+  base: "/documents/",
   title: "∞",
   description: "技术博客",
   head: [["link", { rel: "icon", href: "/favicon.png" }]],

@@ -2,7 +2,7 @@
 
 ## 编程式导航
 
-### <router-link>
+### `<router-link>`
 
 #### push
 

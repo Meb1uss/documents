@@ -1,7 +1,7 @@
 ---
 home: true
 
-heroImage: /hero.jpg
+heroImage: /favicon.png
 tagline: 笔记、文档、博客
 actionText: START
 actionLink: /js/js-basic/01.variable

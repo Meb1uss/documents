@@ -74,7 +74,7 @@ const data = {
 
 const obj = new Proxy(data, {
   get(target, prop) {
-    return Reflect, get(target, prop);
+    return Reflect.get(target, prop);
   },
   set(target, prop, val) {
     return Reflect.set(target, prop, val);

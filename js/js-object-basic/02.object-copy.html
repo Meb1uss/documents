@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>克隆对象 | ∞</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="icon" href="/documents/favicon.png">
+    <meta name="description" content="技术博客">
+    
+    <link rel="preload" href="/documents/assets/css/0.styles.ce79a1dc.css" as="style"><link rel="preload" href="/documents/assets/js/app.0374d463.js" as="script"><link rel="preload" href="/documents/assets/js/2.d25d9c71.js" as="script"><link rel="preload" href="/documents/assets/js/1.758eea13.js" as="script"><link rel="preload" href="/documents/assets/js/45.f6bdf4fc.js" as="script"><link rel="prefetch" href="/documents/assets/js/10.7f64196e.js"><link rel="prefetch" href="/documents/assets/js/100.f99da986.js"><link rel="prefetch" href="/documents/assets/js/11.6f3e8bd7.js"><link rel="prefetch" href="/documents/assets/js/12.63636d74.js"><link rel="prefetch" href="/documents/assets/js/13.3404c7b8.js"><link rel="prefetch" href="/documents/assets/js/14.8ee34933.js"><link rel="prefetch" href="/documents/assets/js/15.e4ed6557.js"><link rel="prefetch" href="/documents/assets/js/16.4869c5ac.js"><link rel="prefetch" href="/documents/assets/js/17.20da9bf2.js"><link rel="prefetch" href="/documents/assets/js/18.a938f922.js"><link rel="prefetch" href="/documents/assets/js/19.e3754cca.js"><link rel="prefetch" href="/documents/assets/js/20.24f07836.js"><link rel="prefetch" href="/documents/assets/js/21.3fc53ab6.js"><link rel="prefetch" href="/documents/assets/js/22.6901d844.js"><link rel="prefetch" href="/documents/assets/js/23.ca8ea99e.js"><link rel="prefetch" href="/documents/assets/js/24.6300795e.js"><link rel="prefetch" href="/documents/assets/js/25.39b2c957.js"><link rel="prefetch" href="/documents/assets/js/26.baab3909.js"><link rel="prefetch" href="/documents/assets/js/27.1f73591e.js"><link rel="prefetch" href="/documents/assets/js/28.4b4b64d8.js"><link rel="prefetch" href="/documents/assets/js/29.b13c9c29.js"><link rel="prefetch" href="/documents/assets/js/3.8183d830.js"><link rel="prefetch" href="/documents/assets/js/30.3aaaa093.js"><link rel="prefetch" href="/documents/assets/js/31.9fabcd5c.js"><link rel="prefetch" href="/documents/assets/js/32.61e7f979.js"><link rel="prefetch" href="/documents/assets/js/33.b65adbb2.js"><link rel="prefetch" href="/documents/assets/js/34.6bfecb28.js"><link rel="prefetch" href="/documents/assets/js/35.fdc95e62.js"><link rel="prefetch" href="/documents/assets/js/36.ef707d93.js"><link rel="prefetch" href="/documents/assets/js/37.989ac3f9.js"><link rel="prefetch" href="/documents/assets/js/38.cf7f9dcd.js"><link rel="prefetch" href="/documents/assets/js/39.7f687b13.js"><link rel="prefetch" href="/documents/assets/js/4.3d23e07a.js"><link rel="prefetch" href="/documents/assets/js/40.75c0c1f6.js"><link rel="prefetch" href="/documents/assets/js/41.a0a2725c.js"><link rel="prefetch" href="/documents/assets/js/42.fb10d25f.js"><link rel="prefetch" href="/documents/assets/js/43.405e3f9a.js"><link rel="prefetch" href="/documents/assets/js/44.e9cb0614.js"><link rel="prefetch" href="/documents/assets/js/46.26ed69de.js"><link rel="prefetch" href="/documents/assets/js/47.8e83576e.js"><link rel="prefetch" href="/documents/assets/js/48.3eda4b2e.js"><link rel="prefetch" href="/documents/assets/js/49.a69a6ec0.js"><link rel="prefetch" href="/documents/assets/js/5.9da0b680.js"><link rel="prefetch" href="/documents/assets/js/50.fa031384.js"><link rel="prefetch" href="/documents/assets/js/51.8d747b95.js"><link rel="prefetch" href="/documents/assets/js/52.89dccf02.js"><link rel="prefetch" href="/documents/assets/js/53.94089ef0.js"><link rel="prefetch" href="/documents/assets/js/54.1fab8617.js"><link rel="prefetch" href="/documents/assets/js/55.2b14258b.js"><link rel="prefetch" href="/documents/assets/js/56.e86271ba.js"><link rel="prefetch" href="/documents/assets/js/57.238f790f.js"><link rel="prefetch" href="/documents/assets/js/58.d933738f.js"><link rel="prefetch" href="/documents/assets/js/59.d83df848.js"><link rel="prefetch" href="/documents/assets/js/6.c956add9.js"><link rel="prefetch" href="/documents/assets/js/60.d0a52bd1.js"><link rel="prefetch" href="/documents/assets/js/61.228dd47d.js"><link rel="prefetch" href="/documents/assets/js/62.465277d8.js"><link rel="prefetch" href="/documents/assets/js/63.c5f7046d.js"><link rel="prefetch" href="/documents/assets/js/64.78475de7.js"><link rel="prefetch" href="/documents/assets/js/65.12ff80a0.js"><link rel="prefetch" href="/documents/assets/js/66.ca6ac6b0.js"><link rel="prefetch" href="/documents/assets/js/67.d40b4e60.js"><link rel="prefetch" href="/documents/assets/js/68.fefca0d6.js"><link rel="prefetch" href="/documents/assets/js/69.c9b8a871.js"><link rel="prefetch" href="/documents/assets/js/7.d37c0a0d.js"><link rel="prefetch" href="/documents/assets/js/70.1a28952a.js"><link rel="prefetch" href="/documents/assets/js/71.63c0df03.js"><link rel="prefetch" href="/documents/assets/js/72.9ffad923.js"><link rel="prefetch" href="/documents/assets/js/73.4e4ecec7.js"><link rel="prefetch" href="/documents/assets/js/74.52523d25.js"><link rel="prefetch" href="/documents/assets/js/75.7fb90c40.js"><link rel="prefetch" href="/documents/assets/js/76.115615fe.js"><link rel="prefetch" href="/documents/assets/js/77.f5fc0012.js"><link rel="prefetch" href="/documents/assets/js/78.1ea11c24.js"><link rel="prefetch" href="/documents/assets/js/79.e35c6a17.js"><link rel="prefetch" href="/documents/assets/js/80.519a038b.js"><link rel="prefetch" href="/documents/assets/js/81.a2799504.js"><link rel="prefetch" href="/documents/assets/js/82.8b13d3c8.js"><link rel="prefetch" href="/documents/assets/js/83.de6ad56d.js"><link rel="prefetch" href="/documents/assets/js/84.a3df25ec.js"><link rel="prefetch" href="/documents/assets/js/85.d8111945.js"><link rel="prefetch" href="/documents/assets/js/86.25af4187.js"><link rel="prefetch" href="/documents/assets/js/87.75609799.js"><link rel="prefetch" href="/documents/assets/js/88.e3be6569.js"><link rel="prefetch" href="/documents/assets/js/89.2dcb34c8.js"><link rel="prefetch" href="/documents/assets/js/90.90f07a3f.js"><link rel="prefetch" href="/documents/assets/js/91.bc0dce6e.js"><link rel="prefetch" href="/documents/assets/js/92.1efd64d6.js"><link rel="prefetch" href="/documents/assets/js/93.db1bf2ee.js"><link rel="prefetch" href="/documents/assets/js/94.2f0f55fb.js"><link rel="prefetch" href="/documents/assets/js/95.0ed6b879.js"><link rel="prefetch" href="/documents/assets/js/96.6bd32d4b.js"><link rel="prefetch" href="/documents/assets/js/97.4f897f9c.js"><link rel="prefetch" href="/documents/assets/js/98.5b8db364.js"><link rel="prefetch" href="/documents/assets/js/99.9f5dd6d8.js"><link rel="prefetch" href="/documents/assets/js/vendors~docsearch.075355c8.js">
+    <link rel="stylesheet" href="/documents/assets/css/0.styles.ce79a1dc.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/documents/" class="home-link router-link-active"><img src="/documents/favicon.png" alt="∞" class="logo"> <span class="site-name can-hide">∞</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/documents/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/documents/js/js-basic/01.variable.html" class="nav-link">
+  JavaScript
+</a></div><div class="nav-item"><a href="/documents/css/layout/float.html" class="nav-link">
+  CSS
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Vue" class="dropdown-title"><span class="title">Vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="Vue" class="mobile-dropdown-title"><span class="title">Vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Vue基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/documents/vue/vue-basic/reactivity.html" class="nav-link">
+  响应式原理
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/vue-basic/vue-basic.html" class="nav-link">
+  Vue配置项
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/vue-basic/class&amp;style.html" class="nav-link">
+  Class绑定
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/vue-basic/v-if&amp;v-show.html" class="nav-link">
+  条件渲染
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/vue-basic/Vue-lifecycle.html" class="nav-link">
+  生命周期
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/vue-basic/component.html" class="nav-link">
+  组件基本使用
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/vue-basic/communication.html" class="nav-link">
+  组件传值
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vue-router
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/documents/vue/vuerouter/vue-router-basic.html" class="nav-link">
+  基本使用
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/vuerouter/params&amp;query.html" class="nav-link">
+  动态路由匹配
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/vuerouter/navigation.html" class="nav-link">
+  编程式导航
+</a></li></ul></li><li class="dropdown-item"><h4>
+          组合式API
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/documents/vue/composition/setup.html" class="nav-link">
+  setup
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/composition/ref&amp;reactive.html" class="nav-link">
+  响应式数据
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/composition/computed.html" class="nav-link">
+  computed
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/composition/watch.html" class="nav-link">
+  watch
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Pinia
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/documents/vue/pinia/pinia.html" class="nav-link">
+  pinia基本使用
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vuex
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/documents/vue/Vuex/Vuex_install.html" class="nav-link">
+  Vuex安装
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/Vuex/Vuex_state.html" class="nav-link">
+  State
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/Vuex/Vuex_mutation.html" class="nav-link">
+  Mutation
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/Vuex/Vuex_action.html" class="nav-link">
+  Action
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/Vuex/Vuex_module.html" class="nav-link">
+  Module
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/documents/ts/ts-type.html" class="nav-link">
+  TypeScript
+</a></div><div class="nav-item"><a href="/documents/tools/git.html" class="nav-link">
+  工具
+</a></div><div class="nav-item"><a href="/documents/ajax/url.html" class="nav-link">
+  AJAX
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/documents/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/documents/js/js-basic/01.variable.html" class="nav-link">
+  JavaScript
+</a></div><div class="nav-item"><a href="/documents/css/layout/float.html" class="nav-link">
+  CSS
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Vue" class="dropdown-title"><span class="title">Vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="Vue" class="mobile-dropdown-title"><span class="title">Vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Vue基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/documents/vue/vue-basic/reactivity.html" class="nav-link">
+  响应式原理
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/vue-basic/vue-basic.html" class="nav-link">
+  Vue配置项
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/vue-basic/class&amp;style.html" class="nav-link">
+  Class绑定
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/vue-basic/v-if&amp;v-show.html" class="nav-link">
+  条件渲染
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/vue-basic/Vue-lifecycle.html" class="nav-link">
+  生命周期
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/vue-basic/component.html" class="nav-link">
+  组件基本使用
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/vue-basic/communication.html" class="nav-link">
+  组件传值
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vue-router
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/documents/vue/vuerouter/vue-router-basic.html" class="nav-link">
+  基本使用
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/vuerouter/params&amp;query.html" class="nav-link">
+  动态路由匹配
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/vuerouter/navigation.html" class="nav-link">
+  编程式导航
+</a></li></ul></li><li class="dropdown-item"><h4>
+          组合式API
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/documents/vue/composition/setup.html" class="nav-link">
+  setup
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/composition/ref&amp;reactive.html" class="nav-link">
+  响应式数据
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/composition/computed.html" class="nav-link">
+  computed
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/composition/watch.html" class="nav-link">
+  watch
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Pinia
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/documents/vue/pinia/pinia.html" class="nav-link">
+  pinia基本使用
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vuex
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/documents/vue/Vuex/Vuex_install.html" class="nav-link">
+  Vuex安装
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/Vuex/Vuex_state.html" class="nav-link">
+  State
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/Vuex/Vuex_mutation.html" class="nav-link">
+  Mutation
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/Vuex/Vuex_action.html" class="nav-link">
+  Action
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/Vuex/Vuex_module.html" class="nav-link">
+  Module
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/documents/ts/ts-type.html" class="nav-link">
+  TypeScript
+</a></div><div class="nav-item"><a href="/documents/tools/git.html" class="nav-link">
+  工具
+</a></div><div class="nav-item"><a href="/documents/ajax/url.html" class="nav-link">
+  AJAX
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>JavaScript基础</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/documents/js/js-basic/01.variable.html" class="sidebar-link">变量与数据类型</a></li><li><a href="/documents/js/js-basic/02.function.html" class="sidebar-link">函数</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>对象基础</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/documents/js/js-object-basic/01.objcet.html" class="sidebar-link">对象</a></li><li><a href="/documents/js/js-object-basic/02.object-copy.html" aria-current="page" class="active sidebar-link">克隆对象</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/documents/js/js-object-basic/02.object-copy.html#引用" class="sidebar-link">引用</a></li><li class="sidebar-sub-header"><a href="/documents/js/js-object-basic/02.object-copy.html#比较对象" class="sidebar-link">比较对象</a></li><li class="sidebar-sub-header"><a href="/documents/js/js-object-basic/02.object-copy.html#浅拷贝" class="sidebar-link">浅拷贝</a></li><li class="sidebar-sub-header"><a href="/documents/js/js-object-basic/02.object-copy.html#深拷贝" class="sidebar-link">深拷贝</a></li><li class="sidebar-sub-header"><a href="/documents/js/js-object-basic/02.object-copy.html#总结" class="sidebar-link">总结</a></li></ul></li><li><a href="/documents/js/js-object-basic/03.this.html" class="sidebar-link">方法， “this”</a></li><li><a href="/documents/js/js-object-basic/04.new.html" class="sidebar-link">构造函数创建对象</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>数据类型</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/documents/js/js-types/01.number.html" class="sidebar-link">数字类型</a></li><li><a href="/documents/js/js-types/02.string.html" class="sidebar-link">字符串</a></li><li><a href="/documents/js/js-types/03.array.html" class="sidebar-link">数组</a></li><li><a href="/documents/js/js-types/04.array-methods.html" class="sidebar-link">数组方法</a></li><li><a href="/documents/js/js-types/05.set&amp;map.html" class="sidebar-link">Set 和 Map</a></li><li><a href="/documents/js/js-types/06.destructuring.html" class="sidebar-link">解构赋值</a></li><li><a href="/documents/js/js-types/07.rest&amp;....html" class="sidebar-link">扩展运算符和剩余模式</a></li><li><a href="/documents/js/js-types/08.for...of.html" class="sidebar-link">for...of 遍历数组</a></li><li><a href="/documents/js/js-types/09.object.value.html" class="sidebar-link">for...of 遍历对象</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>函数进阶</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/documents/js/js-function/01.closure.html" class="sidebar-link">作用域链，闭包</a></li><li><a href="/documents/js/js-function/02.var.html" class="sidebar-link">Var</a></li><li><a href="/documents/js/js-function/03.call,apply,bind.html" class="sidebar-link">call/apply/bind</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>对象属性配置</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/documents/js/js-object/01.property.html" class="sidebar-link">属性标志和属性描述符</a></li><li><a href="/documents/js/js-object/02.getter&amp;setter.html" class="sidebar-link">访问器属性：getter 和 setter</a></li><li><a href="/documents/js/js-object/03.proxy&amp;reflect.html" class="sidebar-link">Proxy 和 Reflect</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>类</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/documents/js/js-class/01.class.html" class="sidebar-link">class</a></li><li><a href="/documents/js/js-class/02.class-extend.html" class="sidebar-link">类继承</a></li><li><a href="/documents/js/js-class/03.class-static.html" class="sidebar-link">静态方法</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Promise</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/documents/js/js-promise/01.promise.html" class="sidebar-link">Promise</a></li><li><a href="/documents/js/js-promise/02.promise-chgining.html" class="sidebar-link">Promise 链</a></li><li><a href="/documents/js/js-promise/03.promise-methods.html" class="sidebar-link">Promise API</a></li><li><a href="/documents/js/js-promise/04.async&amp;await.html" class="sidebar-link">async/await</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="克隆对象"><a href="#克隆对象" class="header-anchor">#</a> 克隆对象</h1> <h2 id="引用"><a href="#引用" class="header-anchor">#</a> 引用</h2> <p>JavaScript 的数据类型分为基本数据类型和引用数据类型，两种类型的根本区别之一是，<strong>引用类型是通过引用存储和复制的，而基本数据类型是作为一个整体去复制的。</strong></p> <p>举个例子，基本数据类型是小体积的玩具（变量值），直接存放在收纳盒（变量）中。
+基本数据类型的复制，就好比你买了两个一样的玩具（变量值相同），虽然样子相同，但装在不同的包装袋中（两个不同的变量），摔坏其中一个，另一个还是完好无损。</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> b <span class="token operator">=</span> a<span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 10 10</span>
+a <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 20 10</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>上面代码中，我们有两个独立变量，每个都存储着数字 <code>10</code>，改变其中一个，另一个不受影响。</p> <p>而对象不是这样。
+<strong>赋值了对象的变量存储的不是对象本身，而是该对象“在内存中的地址” ——换句话说就是对该对象的“引用”。</strong>
+就好像对象放在抽屉里，收纳盒（变量）中存放的是打开对应抽屉的钥匙（引用）。</p> <p>将 <code>user</code> 中存放的钥匙复制一份放入 <code>student</code> 中</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token keyword">let</span> user <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">&quot;James&quot;</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> student <span class="token operator">=</span> user<span class="token punctuation">;</span>
+
+student<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">&quot;Bob&quot;</span><span class="token punctuation">;</span>
+<span class="token function">alert</span><span class="token punctuation">(</span>user<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//'Bob'</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>这时 <code>student</code> 通过备用钥匙打开抽屉（通过引用访问到对象），将 <code>name</code> 改成 <code>'Bob'</code>， <code>user</code> 再打开抽屉时，当然也会看到 <code>name</code> 为 <code>'Bob'</code>。
+对象变量的复制只是引用被复制，而对象自身并没有被复制。就像配了一把备份钥匙，如果你用备份的钥匙打开抽屉拿走十块钱，等妈妈用她的钥匙打开抽屉后也会发现少了十块钱。</p> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>同样地，因为<strong>改变对象的属性时，改变的并不是对对象的引用</strong>，所以使用 <code>const</code> 声明的对象同样可以改变其属性。</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token keyword">const</span> user <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">&quot;James&quot;</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+user<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">&quot;Bob&quot;</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>user<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 'Bob'</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>但改变对象的引用仍然是不被允许的</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token keyword">const</span> user <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">&quot;James&quot;</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+user<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">&quot;Bob&quot;</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>user<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 'Bob'</span>
+
+user <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span> <span class="token comment">// error 改变了对象的引用</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div></div> <h2 id="比较对象"><a href="#比较对象" class="header-anchor">#</a> 比较对象</h2> <p>所以比较两个对象是否相等，比较的并不是两个对象的键值对是否对应相等，而是仅当这两个为同一对象时，两者才相等。
+即，两个变量指向同一个对象，两个变量存放的是同一个对象的引用，两把钥匙开同一个抽屉，两个对象才相等。
+例如，<code>student</code> 和 <code>user</code> 有相同的键值对，但两者并不相等。</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token keyword">let</span> user1 <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">&quot;James&quot;</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> student1 <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">&quot;James&quot;</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token function">alert</span><span class="token punctuation">(</span>user1 <span class="token operator">==</span> student1<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// false</span>
+
+<span class="token comment">//将 `user` 复制给 `student` ，两个变量指向同一个对象，所以相等。</span>
+
+<span class="token keyword">let</span> user2 <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">&quot;James&quot;</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">let</span> student2 <span class="token operator">=</span> user2<span class="token punctuation">;</span>
+
+<span class="token function">alert</span><span class="token punctuation">(</span>user2 <span class="token operator">==</span> student2<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// true</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><h2 id="浅拷贝"><a href="#浅拷贝" class="header-anchor">#</a> 浅拷贝</h2> <p>对对象进行复制只是复制了对该对象的引用，可有时会需要复制对象而不是它的引用，我们希望改变对象 A 的复制品 B 时，A 不会因此改变。我们可以用 <code>for...in</code> 进行克隆。当然，对象的属性都得是基本数据类型，否则改变 B 的对象属性时，A 的对象属性也会随之改变。</p> <p>用 <code>for...in</code> 遍历已有对象的每个属性，在属性全为基本数据类型的前提下进行赋值操作来完成复制。</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token keyword">let</span> user <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">&quot;James&quot;</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">age</span><span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">let</span> clone <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> key <span class="token keyword">in</span> user<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  clone<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> user<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// 将user的每一个属性赋值给clone</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 现在 clone 是带有相同内容的完全独立的对象</span>
+clone<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">&quot;Bob&quot;</span><span class="token punctuation">;</span> <span class="token comment">// 修改其中内容</span>
+
+<span class="token function">alert</span><span class="token punctuation">(</span>user<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 'James' 原对象不受影响</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><p>也可以用 <code>Object.assign</code> 方法来达成同样效果</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code>Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span>dest<span class="token punctuation">,</span> src1<span class="token punctuation">,</span> src2<span class="token operator">...</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ul><li>第一个参数 <code>dest</code> 指目标对象</li> <li>后面的参数 <code>src1, ..., srcN</code> 为源对象</li> <li>该方法将所有源对象的属性拷贝到目标对象 <code>dest</code> 中。换句话说，从第二个位置开始的所有参数的属性都被拷贝到第一个参数的对象中。</li> <li>调用结果返回 <code>dest</code></li></ul> <p>上面的代码也可以写成：</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token keyword">const</span> user <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">&quot;James&quot;</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">age</span><span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> clone <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> user<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">alert</span><span class="token punctuation">(</span>clone<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//{name: 'James', age: 18}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>它将 <code>user</code> 中的所有属性拷贝到了一个空对象中，并返回这个新的对象，赋值给 <code>clone</code> 。
+此方法也可以用来合并多个对象，如果被拷贝的属性的属性名已经存在，那么它会被覆盖：</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token keyword">const</span> user <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">&quot;James&quot;</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">age</span><span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> student <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">&quot;Bob&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> admin <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token number">1234</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span>admin<span class="token punctuation">,</span> user<span class="token punctuation">,</span> student<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>admin<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// {id: 1234, name: 'Bob', age: 18}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p><code>name</code> 被覆盖为 <code>Bob</code> 。</p> <h2 id="深拷贝"><a href="#深拷贝" class="header-anchor">#</a> 深拷贝</h2> <p>但是对象的属性也可以是对象，这时使用上面的方法又会遇到复制引用的问题：</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token keyword">let</span> user <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">&quot;James&quot;</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">size</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">height</span><span class="token operator">:</span> <span class="token number">180</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">weight</span><span class="token operator">:</span> <span class="token number">50</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">let</span> clone <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> user<span class="token punctuation">)</span><span class="token punctuation">;</span>
+clone<span class="token punctuation">.</span>size<span class="token punctuation">.</span>weight <span class="token operator">=</span> <span class="token number">60</span><span class="token punctuation">;</span>
+
+<span class="token function">alert</span><span class="token punctuation">(</span>user<span class="token punctuation">.</span>size<span class="token punctuation">.</span>weight<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 60</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p>我们将 James 进行克隆，发现改变克隆人的身高体重时，James 的身高体重也会发生改变
+此时我们可以在 <code>for...in</code> 中加入 <code>typeof</code> 来判断属性的类型，如果为引用类型，那么也复制它的结构，可以用递归函数来实现</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token keyword">let</span> user <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">&quot;James&quot;</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">size</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">height</span><span class="token operator">:</span> <span class="token number">180</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">weight</span><span class="token operator">:</span> <span class="token number">50</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">let</span> clone <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">cloneObj</span><span class="token punctuation">(</span><span class="token parameter">obj<span class="token punctuation">,</span> clone</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">//obj为源对象，clone为目标对象</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> key <span class="token keyword">in</span> obj<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//for...in判断obj属性的数据类型</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> obj<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">&quot;object&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">//如果obj的某一属性是对象</span>
+      clone<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span> <span class="token comment">//先给clone添加属性，属性值为空对象</span>
+      <span class="token function">cloneObj</span><span class="token punctuation">(</span>obj<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">,</span> clone<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//递归调用此函数，来判断obj的该属性里的数据类型</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      clone<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> obj<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// 如果是基本数据类型，通过直接赋值来复制</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">cloneObj</span><span class="token punctuation">(</span>user<span class="token punctuation">,</span> clone<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>clone<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//{name: 'James', size: {height: 180, weight: 50}}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>user<span class="token punctuation">.</span>size <span class="token operator">==</span> clone<span class="token punctuation">.</span>size<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// false</span>
+
+clone<span class="token punctuation">.</span>size<span class="token punctuation">.</span>weight <span class="token operator">=</span> <span class="token number">60</span><span class="token punctuation">;</span> <span class="token comment">// 修改其中内容</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>user<span class="token punctuation">.</span>size<span class="token punctuation">.</span>weight<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 50 原对象不受影响</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br></div></div><p>也可以使用 <a href="https://www.lodashjs.com/"> lodash</a> 库里的 <a href="https://www.lodashjs.com/docs/lodash.cloneDeep#_clonedeepvalue"> _.cloneDeep(obj) </a>来完成深拷贝。</p> <h2 id="总结"><a href="#总结" class="header-anchor">#</a> 总结</h2> <ul><li>对象通过引用被赋值和拷贝。换句话说，一个变量存储的不是“对象的值”，而是一个对值的“引用”（内存地址）。因此，拷贝此类变量或将其作为函数参数传递时，所拷贝的是引用，而不是对象本身。所有通过被拷贝的引用的操作（如添加、删除属性）都作用在同一个对象上。</li> <li>浅拷贝：只拷贝对象的基本类型数据的属性</li> <li>深拷贝：拷贝对象的所有属性</li> <li>浅拷贝可以通过 <code>for...in</code> 循环和 <code>Object.assign</code> 来实现
+<ul><li>Object.assign()
+<ul><li>第一个参数 <code>dest</code> 指目标对象</li> <li>后面的参数 <code>src1, ..., srcN</code> 为源对象</li> <li>该方法将所有源对象的属性拷贝到目标对象 <code>dest</code> 中。换句话说，从第二个位置开始的所有参数的属性都被拷贝到第一个参数的对象中。</li> <li>调用结果返回 <code>dest</code></li></ul></li> <li>assign /əˈsaɪn/ v. 分派，布置（工作、任务）；分配（某物）</li></ul></li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/documents/js/js-object-basic/01.objcet.html" class="prev">
+        对象
+      </a></span> <span class="next"><a href="/documents/js/js-object-basic/03.this.html">
+        方法， “this”
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/documents/assets/js/app.0374d463.js" defer></script><script src="/documents/assets/js/2.d25d9c71.js" defer></script><script src="/documents/assets/js/1.758eea13.js" defer></script><script src="/documents/assets/js/45.f6bdf4fc.js" defer></script>
+  </body>
+</html>

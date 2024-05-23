@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>插槽 slots | ∞</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="icon" href="/documents/favicon.png">
+    <meta name="description" content="技术博客">
+    
+    <link rel="preload" href="/documents/assets/css/0.styles.ce79a1dc.css" as="style"><link rel="preload" href="/documents/assets/js/app.0374d463.js" as="script"><link rel="preload" href="/documents/assets/js/2.d25d9c71.js" as="script"><link rel="preload" href="/documents/assets/js/1.758eea13.js" as="script"><link rel="preload" href="/documents/assets/js/86.25af4187.js" as="script"><link rel="prefetch" href="/documents/assets/js/10.7f64196e.js"><link rel="prefetch" href="/documents/assets/js/100.f99da986.js"><link rel="prefetch" href="/documents/assets/js/11.6f3e8bd7.js"><link rel="prefetch" href="/documents/assets/js/12.63636d74.js"><link rel="prefetch" href="/documents/assets/js/13.3404c7b8.js"><link rel="prefetch" href="/documents/assets/js/14.8ee34933.js"><link rel="prefetch" href="/documents/assets/js/15.e4ed6557.js"><link rel="prefetch" href="/documents/assets/js/16.4869c5ac.js"><link rel="prefetch" href="/documents/assets/js/17.20da9bf2.js"><link rel="prefetch" href="/documents/assets/js/18.a938f922.js"><link rel="prefetch" href="/documents/assets/js/19.e3754cca.js"><link rel="prefetch" href="/documents/assets/js/20.24f07836.js"><link rel="prefetch" href="/documents/assets/js/21.3fc53ab6.js"><link rel="prefetch" href="/documents/assets/js/22.6901d844.js"><link rel="prefetch" href="/documents/assets/js/23.ca8ea99e.js"><link rel="prefetch" href="/documents/assets/js/24.6300795e.js"><link rel="prefetch" href="/documents/assets/js/25.39b2c957.js"><link rel="prefetch" href="/documents/assets/js/26.baab3909.js"><link rel="prefetch" href="/documents/assets/js/27.1f73591e.js"><link rel="prefetch" href="/documents/assets/js/28.4b4b64d8.js"><link rel="prefetch" href="/documents/assets/js/29.b13c9c29.js"><link rel="prefetch" href="/documents/assets/js/3.8183d830.js"><link rel="prefetch" href="/documents/assets/js/30.3aaaa093.js"><link rel="prefetch" href="/documents/assets/js/31.9fabcd5c.js"><link rel="prefetch" href="/documents/assets/js/32.61e7f979.js"><link rel="prefetch" href="/documents/assets/js/33.b65adbb2.js"><link rel="prefetch" href="/documents/assets/js/34.6bfecb28.js"><link rel="prefetch" href="/documents/assets/js/35.fdc95e62.js"><link rel="prefetch" href="/documents/assets/js/36.ef707d93.js"><link rel="prefetch" href="/documents/assets/js/37.989ac3f9.js"><link rel="prefetch" href="/documents/assets/js/38.cf7f9dcd.js"><link rel="prefetch" href="/documents/assets/js/39.7f687b13.js"><link rel="prefetch" href="/documents/assets/js/4.3d23e07a.js"><link rel="prefetch" href="/documents/assets/js/40.75c0c1f6.js"><link rel="prefetch" href="/documents/assets/js/41.a0a2725c.js"><link rel="prefetch" href="/documents/assets/js/42.fb10d25f.js"><link rel="prefetch" href="/documents/assets/js/43.405e3f9a.js"><link rel="prefetch" href="/documents/assets/js/44.e9cb0614.js"><link rel="prefetch" href="/documents/assets/js/45.f6bdf4fc.js"><link rel="prefetch" href="/documents/assets/js/46.26ed69de.js"><link rel="prefetch" href="/documents/assets/js/47.8e83576e.js"><link rel="prefetch" href="/documents/assets/js/48.3eda4b2e.js"><link rel="prefetch" href="/documents/assets/js/49.a69a6ec0.js"><link rel="prefetch" href="/documents/assets/js/5.9da0b680.js"><link rel="prefetch" href="/documents/assets/js/50.fa031384.js"><link rel="prefetch" href="/documents/assets/js/51.8d747b95.js"><link rel="prefetch" href="/documents/assets/js/52.89dccf02.js"><link rel="prefetch" href="/documents/assets/js/53.94089ef0.js"><link rel="prefetch" href="/documents/assets/js/54.1fab8617.js"><link rel="prefetch" href="/documents/assets/js/55.2b14258b.js"><link rel="prefetch" href="/documents/assets/js/56.e86271ba.js"><link rel="prefetch" href="/documents/assets/js/57.238f790f.js"><link rel="prefetch" href="/documents/assets/js/58.d933738f.js"><link rel="prefetch" href="/documents/assets/js/59.d83df848.js"><link rel="prefetch" href="/documents/assets/js/6.c956add9.js"><link rel="prefetch" href="/documents/assets/js/60.d0a52bd1.js"><link rel="prefetch" href="/documents/assets/js/61.228dd47d.js"><link rel="prefetch" href="/documents/assets/js/62.465277d8.js"><link rel="prefetch" href="/documents/assets/js/63.c5f7046d.js"><link rel="prefetch" href="/documents/assets/js/64.78475de7.js"><link rel="prefetch" href="/documents/assets/js/65.12ff80a0.js"><link rel="prefetch" href="/documents/assets/js/66.ca6ac6b0.js"><link rel="prefetch" href="/documents/assets/js/67.d40b4e60.js"><link rel="prefetch" href="/documents/assets/js/68.fefca0d6.js"><link rel="prefetch" href="/documents/assets/js/69.c9b8a871.js"><link rel="prefetch" href="/documents/assets/js/7.d37c0a0d.js"><link rel="prefetch" href="/documents/assets/js/70.1a28952a.js"><link rel="prefetch" href="/documents/assets/js/71.63c0df03.js"><link rel="prefetch" href="/documents/assets/js/72.9ffad923.js"><link rel="prefetch" href="/documents/assets/js/73.4e4ecec7.js"><link rel="prefetch" href="/documents/assets/js/74.52523d25.js"><link rel="prefetch" href="/documents/assets/js/75.7fb90c40.js"><link rel="prefetch" href="/documents/assets/js/76.115615fe.js"><link rel="prefetch" href="/documents/assets/js/77.f5fc0012.js"><link rel="prefetch" href="/documents/assets/js/78.1ea11c24.js"><link rel="prefetch" href="/documents/assets/js/79.e35c6a17.js"><link rel="prefetch" href="/documents/assets/js/80.519a038b.js"><link rel="prefetch" href="/documents/assets/js/81.a2799504.js"><link rel="prefetch" href="/documents/assets/js/82.8b13d3c8.js"><link rel="prefetch" href="/documents/assets/js/83.de6ad56d.js"><link rel="prefetch" href="/documents/assets/js/84.a3df25ec.js"><link rel="prefetch" href="/documents/assets/js/85.d8111945.js"><link rel="prefetch" href="/documents/assets/js/87.75609799.js"><link rel="prefetch" href="/documents/assets/js/88.e3be6569.js"><link rel="prefetch" href="/documents/assets/js/89.2dcb34c8.js"><link rel="prefetch" href="/documents/assets/js/90.90f07a3f.js"><link rel="prefetch" href="/documents/assets/js/91.bc0dce6e.js"><link rel="prefetch" href="/documents/assets/js/92.1efd64d6.js"><link rel="prefetch" href="/documents/assets/js/93.db1bf2ee.js"><link rel="prefetch" href="/documents/assets/js/94.2f0f55fb.js"><link rel="prefetch" href="/documents/assets/js/95.0ed6b879.js"><link rel="prefetch" href="/documents/assets/js/96.6bd32d4b.js"><link rel="prefetch" href="/documents/assets/js/97.4f897f9c.js"><link rel="prefetch" href="/documents/assets/js/98.5b8db364.js"><link rel="prefetch" href="/documents/assets/js/99.9f5dd6d8.js"><link rel="prefetch" href="/documents/assets/js/vendors~docsearch.075355c8.js">
+    <link rel="stylesheet" href="/documents/assets/css/0.styles.ce79a1dc.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/documents/" class="home-link router-link-active"><img src="/documents/favicon.png" alt="∞" class="logo"> <span class="site-name can-hide">∞</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/documents/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/documents/js/js-basic/01.variable.html" class="nav-link">
+  JavaScript
+</a></div><div class="nav-item"><a href="/documents/css/layout/float.html" class="nav-link">
+  CSS
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Vue" class="dropdown-title"><span class="title">Vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="Vue" class="mobile-dropdown-title"><span class="title">Vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Vue基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/documents/vue/vue-basic/reactivity.html" class="nav-link">
+  响应式原理
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/vue-basic/vue-basic.html" class="nav-link">
+  Vue配置项
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/vue-basic/class&amp;style.html" class="nav-link">
+  Class绑定
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/vue-basic/v-if&amp;v-show.html" class="nav-link">
+  条件渲染
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/vue-basic/Vue-lifecycle.html" class="nav-link">
+  生命周期
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/vue-basic/component.html" class="nav-link">
+  组件基本使用
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/vue-basic/communication.html" class="nav-link">
+  组件传值
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vue-router
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/documents/vue/vuerouter/vue-router-basic.html" class="nav-link">
+  基本使用
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/vuerouter/params&amp;query.html" class="nav-link">
+  动态路由匹配
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/vuerouter/navigation.html" class="nav-link">
+  编程式导航
+</a></li></ul></li><li class="dropdown-item"><h4>
+          组合式API
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/documents/vue/composition/setup.html" class="nav-link">
+  setup
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/composition/ref&amp;reactive.html" class="nav-link">
+  响应式数据
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/composition/computed.html" class="nav-link">
+  computed
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/composition/watch.html" class="nav-link">
+  watch
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Pinia
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/documents/vue/pinia/pinia.html" class="nav-link">
+  pinia基本使用
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vuex
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/documents/vue/Vuex/Vuex_install.html" class="nav-link">
+  Vuex安装
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/Vuex/Vuex_state.html" class="nav-link">
+  State
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/Vuex/Vuex_mutation.html" class="nav-link">
+  Mutation
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/Vuex/Vuex_action.html" class="nav-link">
+  Action
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/Vuex/Vuex_module.html" class="nav-link">
+  Module
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/documents/ts/ts-type.html" class="nav-link">
+  TypeScript
+</a></div><div class="nav-item"><a href="/documents/tools/git.html" class="nav-link">
+  工具
+</a></div><div class="nav-item"><a href="/documents/ajax/url.html" class="nav-link">
+  AJAX
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/documents/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/documents/js/js-basic/01.variable.html" class="nav-link">
+  JavaScript
+</a></div><div class="nav-item"><a href="/documents/css/layout/float.html" class="nav-link">
+  CSS
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Vue" class="dropdown-title"><span class="title">Vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="Vue" class="mobile-dropdown-title"><span class="title">Vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Vue基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/documents/vue/vue-basic/reactivity.html" class="nav-link">
+  响应式原理
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/vue-basic/vue-basic.html" class="nav-link">
+  Vue配置项
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/vue-basic/class&amp;style.html" class="nav-link">
+  Class绑定
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/vue-basic/v-if&amp;v-show.html" class="nav-link">
+  条件渲染
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/vue-basic/Vue-lifecycle.html" class="nav-link">
+  生命周期
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/vue-basic/component.html" class="nav-link">
+  组件基本使用
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/vue-basic/communication.html" class="nav-link">
+  组件传值
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vue-router
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/documents/vue/vuerouter/vue-router-basic.html" class="nav-link">
+  基本使用
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/vuerouter/params&amp;query.html" class="nav-link">
+  动态路由匹配
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/vuerouter/navigation.html" class="nav-link">
+  编程式导航
+</a></li></ul></li><li class="dropdown-item"><h4>
+          组合式API
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/documents/vue/composition/setup.html" class="nav-link">
+  setup
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/composition/ref&amp;reactive.html" class="nav-link">
+  响应式数据
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/composition/computed.html" class="nav-link">
+  computed
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/composition/watch.html" class="nav-link">
+  watch
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Pinia
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/documents/vue/pinia/pinia.html" class="nav-link">
+  pinia基本使用
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vuex
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/documents/vue/Vuex/Vuex_install.html" class="nav-link">
+  Vuex安装
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/Vuex/Vuex_state.html" class="nav-link">
+  State
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/Vuex/Vuex_mutation.html" class="nav-link">
+  Mutation
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/Vuex/Vuex_action.html" class="nav-link">
+  Action
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/Vuex/Vuex_module.html" class="nav-link">
+  Module
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/documents/ts/ts-type.html" class="nav-link">
+  TypeScript
+</a></div><div class="nav-item"><a href="/documents/tools/git.html" class="nav-link">
+  工具
+</a></div><div class="nav-item"><a href="/documents/ajax/url.html" class="nav-link">
+  AJAX
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Vue基础</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/documents/vue/vue-basic/reactivity.html" class="sidebar-link">Vue 响应式原理</a></li><li><a href="/documents/vue/vue-basic/vue-basic.html" class="sidebar-link">Vue 基础</a></li><li><a href="/documents/vue/vue-basic/class&amp;style.html" class="sidebar-link">Class 与 Style 绑定</a></li><li><a href="/documents/vue/vue-basic/v-if&amp;v-show.html" class="sidebar-link">条件渲染</a></li><li><a href="/documents/vue/vue-basic/Vue-lifecycle.html" class="sidebar-link">生命周期</a></li><li><a href="/documents/vue/vue-basic/component.html" class="sidebar-link">组件基本使用</a></li><li><a href="/documents/vue/vue-basic/communication.html" class="sidebar-link">组件通信</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Vue2</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/documents/vue/vue2/Vue2_data.html" class="sidebar-link">创建 Vue 实例</a></li><li><a href="/documents/vue/vue2/Vue2_methods.html" class="sidebar-link">methods</a></li><li><a href="/documents/vue/vue2/Vue2_computed.html" class="sidebar-link">computed</a></li><li><a href="/documents/vue/vue2/Vue2_watch.html" class="sidebar-link">watch</a></li><li><a href="/documents/vue/vue2/Vue2_mixin.html" class="sidebar-link">mixin</a></li><li><a href="/documents/vue/vue2/Vue2_render.html" class="sidebar-link">render</a></li><li><a href="/documents/vue/vue2/Vue3_directives.html" class="sidebar-link">directives</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Vue-Router</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/documents/vue/vuerouter/vue-router-basic.html" class="sidebar-link">Vue-router 基本使用</a></li><li><a href="/documents/vue/vuerouter/params&amp;query.html" class="sidebar-link">动态路由匹配</a></li><li><a href="/documents/vue/vuerouter/navigation.html" class="sidebar-link">编程式导航</a></li><li><a href="/documents/vue/vuerouter/navigation-guards.html" class="sidebar-link">导航守卫</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>组合式API</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/documents/vue/composition/setup.html" class="sidebar-link">setup 概述</a></li><li><a href="/documents/vue/composition/ref&amp;reactive.html" class="sidebar-link">ref 和 reactive</a></li><li><a href="/documents/vue/composition/computed.html" class="sidebar-link">计算属性</a></li><li><a href="/documents/vue/composition/watch.html" class="sidebar-link">watch</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Vuex</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/documents/vue/Vuex/Vuex_install.html" class="sidebar-link">基本使用</a></li><li><a href="/documents/vue/Vuex/Vuex_state.html" class="sidebar-link">State</a></li><li><a href="/documents/vue/Vuex/Vuex_mutation.html" class="sidebar-link">Mutation</a></li><li><a href="/documents/vue/Vuex/Vuex_action.html" class="sidebar-link">Action</a></li><li><a href="/documents/vue/Vuex/Vuex_module.html" class="sidebar-link">Module</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Pinia</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/documents/vue/pinia/pinia.html" class="sidebar-link">Pinia 基本使用</a></li><li><a href="/documents/vue/pinia/pinia-plugin-persistedstate.html" class="sidebar-link">Pinia 数据持久化</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="插槽-slots"><a href="#插槽-slots" class="header-anchor">#</a> 插槽 slots</h2> <h3 id="基本使用"><a href="#基本使用" class="header-anchor">#</a> 基本使用</h3> <p>插槽类似于组件内的占位符，表示父组件提供的插槽内容在哪里渲染</p> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token comment">&lt;!-- 子组件 --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">&gt;</span></span>我是content组件内容<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>slot</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>slot</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>插槽内容可以是任意合法的模板内容，不局限于文本。例如我们可以传入多个元素，甚至是组件：</p> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token comment">&lt;!-- 父组件多次使用插槽 --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>content</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span><span class="token punctuation">&gt;</span></span>插槽使用1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">&gt;</span></span>插槽使用2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span>
+    插槽使用3
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>content</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h3 id="渲染作用域"><a href="#渲染作用域" class="header-anchor">#</a> 渲染作用域</h3> <p>插槽在哪个组件中使用，就只能访问该组件的作用域。
+插槽内容可以访问到父组件的数据作用域，无法访问子组件的数据。</p> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token comment">&lt;!-- 子组件 --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+  <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+    <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">msg</span><span class="token operator">:</span> <span class="token string">&quot;子组件数据&quot;</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token comment">&lt;!-- 父组件 --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>content</span><span class="token punctuation">&gt;</span></span>{{ msg }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>content</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+  <span class="token keyword">import</span> Content <span class="token keyword">from</span> <span class="token string">&quot;./components/Content.vue&quot;</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+    <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">msg</span><span class="token operator">:</span> <span class="token string">&quot;父组件数据&quot;</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">components</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      Content<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><p>页面显示父组件中的数据。</p> <h3 id="插槽的默认内容"><a href="#插槽的默认内容" class="header-anchor">#</a> 插槽的默认内容</h3> <p>在没有提供内容时，插槽的默认内容将会被渲染，（在使用具名插槽且没使用 <code>v-slot</code> 指令时，也会渲染默认内容）</p> <p>子组件提供默认内容</p> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>slot</span><span class="token punctuation">&gt;</span></span>插槽默认内容<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>slot</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>在父组件没有提供内容时</p> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>content</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>content</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>插槽默认内容将会被渲染，等同于</p> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">&gt;</span></span>插槽默认内容<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>而父组件提供内容时，渲染父组件内容</p> <h3 id="具名插槽"><a href="#具名插槽" class="header-anchor">#</a> 具名插槽</h3> <p>给插槽设置 <code>name</code> 属性，在父组件使用一个含 <code>v-slot</code> 指令的 <code>&lt;template&gt;</code> 元素，并将目标插槽的名字传给该指令，
+<code>v-slot:</code>后的值不需要引号 ：</p> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>slot</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>button<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>slot</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>slot</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>h2<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>slot</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>父组件：</p> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>content</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span> <span class="token attr-name"><span class="token namespace">v-slot:</span>button</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span><span class="token punctuation">&gt;</span></span>具名插槽<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span> <span class="token attr-name"><span class="token namespace">v-slot:</span>h2</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">&gt;</span></span>具名插槽<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>content</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p><code>v-slot:</code> 可简写为 <code>#</code> ：</p> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>content</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span> <span class="token attr-name">#button</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span><span class="token punctuation">&gt;</span></span>具名插槽<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span> <span class="token attr-name">#h2</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">&gt;</span></span>具名插槽<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>content</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>未提供 <code>name</code> 属性的 <code>&lt;slot\&gt;</code> 会隐式地命名为 <code>&quot;default&quot;</code></p> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>slot</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>button<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>slot</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>slot</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>h2<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>slot</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>slot</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>slot</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>content</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span> <span class="token attr-name">#h2</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">&gt;</span></span>具名插槽h2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span> <span class="token attr-name">#default</span><span class="token punctuation">&gt;</span></span> 默认为default <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span> <span class="token attr-name"><span class="token namespace">v-slot:</span>button</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>button<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>具名插槽button<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>content</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><h3 id="作用域插槽"><a href="#作用域插槽" class="header-anchor">#</a> 作用域插槽</h3> <p>在父组件中，如需使用子组件的内容，则可使用作用域插槽。
+类似于 <code>props</code> 传值，给 <code>slot</code> 添加属性。在父组件中使用 <code>v-slot</code> 接收一个 <code>props</code> 对象：</p> <p>子组件</p> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>slot</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>h2<span class="token punctuation">&quot;</span></span> <span class="token attr-name">:msg</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>msg<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>slot</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+  <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+    <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">msg</span><span class="token operator">:</span> <span class="token string">&quot;子组件数据&quot;</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>父组件</p> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>content</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span> <span class="token attr-name"><span class="token namespace">v-slot:</span>h2</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>slorProps<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">&gt;</span></span>{{ slorProps.msg }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>content</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/documents/assets/js/app.0374d463.js" defer></script><script src="/documents/assets/js/2.d25d9c71.js" defer></script><script src="/documents/assets/js/1.758eea13.js" defer></script><script src="/documents/assets/js/86.25af4187.js" defer></script>
+  </body>
+</html>

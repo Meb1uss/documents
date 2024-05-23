@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>扩展运算符和剩余模式 | ∞</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="icon" href="/documents/favicon.png">
+    <meta name="description" content="技术博客">
+    
+    <link rel="preload" href="/documents/assets/css/0.styles.ce79a1dc.css" as="style"><link rel="preload" href="/documents/assets/js/app.0374d463.js" as="script"><link rel="preload" href="/documents/assets/js/2.d25d9c71.js" as="script"><link rel="preload" href="/documents/assets/js/1.758eea13.js" as="script"><link rel="preload" href="/documents/assets/js/61.228dd47d.js" as="script"><link rel="prefetch" href="/documents/assets/js/10.7f64196e.js"><link rel="prefetch" href="/documents/assets/js/100.f99da986.js"><link rel="prefetch" href="/documents/assets/js/11.6f3e8bd7.js"><link rel="prefetch" href="/documents/assets/js/12.63636d74.js"><link rel="prefetch" href="/documents/assets/js/13.3404c7b8.js"><link rel="prefetch" href="/documents/assets/js/14.8ee34933.js"><link rel="prefetch" href="/documents/assets/js/15.e4ed6557.js"><link rel="prefetch" href="/documents/assets/js/16.4869c5ac.js"><link rel="prefetch" href="/documents/assets/js/17.20da9bf2.js"><link rel="prefetch" href="/documents/assets/js/18.a938f922.js"><link rel="prefetch" href="/documents/assets/js/19.e3754cca.js"><link rel="prefetch" href="/documents/assets/js/20.24f07836.js"><link rel="prefetch" href="/documents/assets/js/21.3fc53ab6.js"><link rel="prefetch" href="/documents/assets/js/22.6901d844.js"><link rel="prefetch" href="/documents/assets/js/23.ca8ea99e.js"><link rel="prefetch" href="/documents/assets/js/24.6300795e.js"><link rel="prefetch" href="/documents/assets/js/25.39b2c957.js"><link rel="prefetch" href="/documents/assets/js/26.baab3909.js"><link rel="prefetch" href="/documents/assets/js/27.1f73591e.js"><link rel="prefetch" href="/documents/assets/js/28.4b4b64d8.js"><link rel="prefetch" href="/documents/assets/js/29.b13c9c29.js"><link rel="prefetch" href="/documents/assets/js/3.8183d830.js"><link rel="prefetch" href="/documents/assets/js/30.3aaaa093.js"><link rel="prefetch" href="/documents/assets/js/31.9fabcd5c.js"><link rel="prefetch" href="/documents/assets/js/32.61e7f979.js"><link rel="prefetch" href="/documents/assets/js/33.b65adbb2.js"><link rel="prefetch" href="/documents/assets/js/34.6bfecb28.js"><link rel="prefetch" href="/documents/assets/js/35.fdc95e62.js"><link rel="prefetch" href="/documents/assets/js/36.ef707d93.js"><link rel="prefetch" href="/documents/assets/js/37.989ac3f9.js"><link rel="prefetch" href="/documents/assets/js/38.cf7f9dcd.js"><link rel="prefetch" href="/documents/assets/js/39.7f687b13.js"><link rel="prefetch" href="/documents/assets/js/4.3d23e07a.js"><link rel="prefetch" href="/documents/assets/js/40.75c0c1f6.js"><link rel="prefetch" href="/documents/assets/js/41.a0a2725c.js"><link rel="prefetch" href="/documents/assets/js/42.fb10d25f.js"><link rel="prefetch" href="/documents/assets/js/43.405e3f9a.js"><link rel="prefetch" href="/documents/assets/js/44.e9cb0614.js"><link rel="prefetch" href="/documents/assets/js/45.f6bdf4fc.js"><link rel="prefetch" href="/documents/assets/js/46.26ed69de.js"><link rel="prefetch" href="/documents/assets/js/47.8e83576e.js"><link rel="prefetch" href="/documents/assets/js/48.3eda4b2e.js"><link rel="prefetch" href="/documents/assets/js/49.a69a6ec0.js"><link rel="prefetch" href="/documents/assets/js/5.9da0b680.js"><link rel="prefetch" href="/documents/assets/js/50.fa031384.js"><link rel="prefetch" href="/documents/assets/js/51.8d747b95.js"><link rel="prefetch" href="/documents/assets/js/52.89dccf02.js"><link rel="prefetch" href="/documents/assets/js/53.94089ef0.js"><link rel="prefetch" href="/documents/assets/js/54.1fab8617.js"><link rel="prefetch" href="/documents/assets/js/55.2b14258b.js"><link rel="prefetch" href="/documents/assets/js/56.e86271ba.js"><link rel="prefetch" href="/documents/assets/js/57.238f790f.js"><link rel="prefetch" href="/documents/assets/js/58.d933738f.js"><link rel="prefetch" href="/documents/assets/js/59.d83df848.js"><link rel="prefetch" href="/documents/assets/js/6.c956add9.js"><link rel="prefetch" href="/documents/assets/js/60.d0a52bd1.js"><link rel="prefetch" href="/documents/assets/js/62.465277d8.js"><link rel="prefetch" href="/documents/assets/js/63.c5f7046d.js"><link rel="prefetch" href="/documents/assets/js/64.78475de7.js"><link rel="prefetch" href="/documents/assets/js/65.12ff80a0.js"><link rel="prefetch" href="/documents/assets/js/66.ca6ac6b0.js"><link rel="prefetch" href="/documents/assets/js/67.d40b4e60.js"><link rel="prefetch" href="/documents/assets/js/68.fefca0d6.js"><link rel="prefetch" href="/documents/assets/js/69.c9b8a871.js"><link rel="prefetch" href="/documents/assets/js/7.d37c0a0d.js"><link rel="prefetch" href="/documents/assets/js/70.1a28952a.js"><link rel="prefetch" href="/documents/assets/js/71.63c0df03.js"><link rel="prefetch" href="/documents/assets/js/72.9ffad923.js"><link rel="prefetch" href="/documents/assets/js/73.4e4ecec7.js"><link rel="prefetch" href="/documents/assets/js/74.52523d25.js"><link rel="prefetch" href="/documents/assets/js/75.7fb90c40.js"><link rel="prefetch" href="/documents/assets/js/76.115615fe.js"><link rel="prefetch" href="/documents/assets/js/77.f5fc0012.js"><link rel="prefetch" href="/documents/assets/js/78.1ea11c24.js"><link rel="prefetch" href="/documents/assets/js/79.e35c6a17.js"><link rel="prefetch" href="/documents/assets/js/80.519a038b.js"><link rel="prefetch" href="/documents/assets/js/81.a2799504.js"><link rel="prefetch" href="/documents/assets/js/82.8b13d3c8.js"><link rel="prefetch" href="/documents/assets/js/83.de6ad56d.js"><link rel="prefetch" href="/documents/assets/js/84.a3df25ec.js"><link rel="prefetch" href="/documents/assets/js/85.d8111945.js"><link rel="prefetch" href="/documents/assets/js/86.25af4187.js"><link rel="prefetch" href="/documents/assets/js/87.75609799.js"><link rel="prefetch" href="/documents/assets/js/88.e3be6569.js"><link rel="prefetch" href="/documents/assets/js/89.2dcb34c8.js"><link rel="prefetch" href="/documents/assets/js/90.90f07a3f.js"><link rel="prefetch" href="/documents/assets/js/91.bc0dce6e.js"><link rel="prefetch" href="/documents/assets/js/92.1efd64d6.js"><link rel="prefetch" href="/documents/assets/js/93.db1bf2ee.js"><link rel="prefetch" href="/documents/assets/js/94.2f0f55fb.js"><link rel="prefetch" href="/documents/assets/js/95.0ed6b879.js"><link rel="prefetch" href="/documents/assets/js/96.6bd32d4b.js"><link rel="prefetch" href="/documents/assets/js/97.4f897f9c.js"><link rel="prefetch" href="/documents/assets/js/98.5b8db364.js"><link rel="prefetch" href="/documents/assets/js/99.9f5dd6d8.js"><link rel="prefetch" href="/documents/assets/js/vendors~docsearch.075355c8.js">
+    <link rel="stylesheet" href="/documents/assets/css/0.styles.ce79a1dc.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/documents/" class="home-link router-link-active"><img src="/documents/favicon.png" alt="∞" class="logo"> <span class="site-name can-hide">∞</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/documents/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/documents/js/js-basic/01.variable.html" class="nav-link">
+  JavaScript
+</a></div><div class="nav-item"><a href="/documents/css/layout/float.html" class="nav-link">
+  CSS
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Vue" class="dropdown-title"><span class="title">Vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="Vue" class="mobile-dropdown-title"><span class="title">Vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Vue基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/documents/vue/vue-basic/reactivity.html" class="nav-link">
+  响应式原理
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/vue-basic/vue-basic.html" class="nav-link">
+  Vue配置项
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/vue-basic/class&amp;style.html" class="nav-link">
+  Class绑定
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/vue-basic/v-if&amp;v-show.html" class="nav-link">
+  条件渲染
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/vue-basic/Vue-lifecycle.html" class="nav-link">
+  生命周期
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/vue-basic/component.html" class="nav-link">
+  组件基本使用
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/vue-basic/communication.html" class="nav-link">
+  组件传值
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vue-router
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/documents/vue/vuerouter/vue-router-basic.html" class="nav-link">
+  基本使用
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/vuerouter/params&amp;query.html" class="nav-link">
+  动态路由匹配
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/vuerouter/navigation.html" class="nav-link">
+  编程式导航
+</a></li></ul></li><li class="dropdown-item"><h4>
+          组合式API
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/documents/vue/composition/setup.html" class="nav-link">
+  setup
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/composition/ref&amp;reactive.html" class="nav-link">
+  响应式数据
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/composition/computed.html" class="nav-link">
+  computed
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/composition/watch.html" class="nav-link">
+  watch
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Pinia
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/documents/vue/pinia/pinia.html" class="nav-link">
+  pinia基本使用
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vuex
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/documents/vue/Vuex/Vuex_install.html" class="nav-link">
+  Vuex安装
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/Vuex/Vuex_state.html" class="nav-link">
+  State
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/Vuex/Vuex_mutation.html" class="nav-link">
+  Mutation
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/Vuex/Vuex_action.html" class="nav-link">
+  Action
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/Vuex/Vuex_module.html" class="nav-link">
+  Module
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/documents/ts/ts-type.html" class="nav-link">
+  TypeScript
+</a></div><div class="nav-item"><a href="/documents/tools/git.html" class="nav-link">
+  工具
+</a></div><div class="nav-item"><a href="/documents/ajax/url.html" class="nav-link">
+  AJAX
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/documents/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/documents/js/js-basic/01.variable.html" class="nav-link">
+  JavaScript
+</a></div><div class="nav-item"><a href="/documents/css/layout/float.html" class="nav-link">
+  CSS
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Vue" class="dropdown-title"><span class="title">Vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="Vue" class="mobile-dropdown-title"><span class="title">Vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Vue基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/documents/vue/vue-basic/reactivity.html" class="nav-link">
+  响应式原理
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/vue-basic/vue-basic.html" class="nav-link">
+  Vue配置项
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/vue-basic/class&amp;style.html" class="nav-link">
+  Class绑定
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/vue-basic/v-if&amp;v-show.html" class="nav-link">
+  条件渲染
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/vue-basic/Vue-lifecycle.html" class="nav-link">
+  生命周期
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/vue-basic/component.html" class="nav-link">
+  组件基本使用
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/vue-basic/communication.html" class="nav-link">
+  组件传值
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vue-router
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/documents/vue/vuerouter/vue-router-basic.html" class="nav-link">
+  基本使用
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/vuerouter/params&amp;query.html" class="nav-link">
+  动态路由匹配
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/vuerouter/navigation.html" class="nav-link">
+  编程式导航
+</a></li></ul></li><li class="dropdown-item"><h4>
+          组合式API
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/documents/vue/composition/setup.html" class="nav-link">
+  setup
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/composition/ref&amp;reactive.html" class="nav-link">
+  响应式数据
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/composition/computed.html" class="nav-link">
+  computed
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/composition/watch.html" class="nav-link">
+  watch
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Pinia
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/documents/vue/pinia/pinia.html" class="nav-link">
+  pinia基本使用
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vuex
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/documents/vue/Vuex/Vuex_install.html" class="nav-link">
+  Vuex安装
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/Vuex/Vuex_state.html" class="nav-link">
+  State
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/Vuex/Vuex_mutation.html" class="nav-link">
+  Mutation
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/Vuex/Vuex_action.html" class="nav-link">
+  Action
+</a></li><li class="dropdown-subitem"><a href="/documents/vue/Vuex/Vuex_module.html" class="nav-link">
+  Module
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/documents/ts/ts-type.html" class="nav-link">
+  TypeScript
+</a></div><div class="nav-item"><a href="/documents/tools/git.html" class="nav-link">
+  工具
+</a></div><div class="nav-item"><a href="/documents/ajax/url.html" class="nav-link">
+  AJAX
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>JavaScript基础</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/documents/js/js-basic/01.variable.html" class="sidebar-link">变量与数据类型</a></li><li><a href="/documents/js/js-basic/02.function.html" class="sidebar-link">函数</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>对象基础</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/documents/js/js-object-basic/01.objcet.html" class="sidebar-link">对象</a></li><li><a href="/documents/js/js-object-basic/02.object-copy.html" class="sidebar-link">克隆对象</a></li><li><a href="/documents/js/js-object-basic/03.this.html" class="sidebar-link">方法， “this”</a></li><li><a href="/documents/js/js-object-basic/04.new.html" class="sidebar-link">构造函数创建对象</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>数据类型</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/documents/js/js-types/01.number.html" class="sidebar-link">数字类型</a></li><li><a href="/documents/js/js-types/02.string.html" class="sidebar-link">字符串</a></li><li><a href="/documents/js/js-types/03.array.html" class="sidebar-link">数组</a></li><li><a href="/documents/js/js-types/04.array-methods.html" class="sidebar-link">数组方法</a></li><li><a href="/documents/js/js-types/05.set&amp;map.html" class="sidebar-link">Set 和 Map</a></li><li><a href="/documents/js/js-types/06.destructuring.html" class="sidebar-link">解构赋值</a></li><li><a href="/documents/js/js-types/07.rest&amp;....html" aria-current="page" class="active sidebar-link">扩展运算符和剩余模式</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/documents/js/js-types/07.rest&amp;....html#扩展运算符" class="sidebar-link">扩展运算符</a></li><li class="sidebar-sub-header"><a href="/documents/js/js-types/07.rest&amp;....html#rest" class="sidebar-link">rest</a></li><li class="sidebar-sub-header"><a href="/documents/js/js-types/07.rest&amp;....html#总结" class="sidebar-link">总结</a></li></ul></li><li><a href="/documents/js/js-types/08.for...of.html" class="sidebar-link">for...of 遍历数组</a></li><li><a href="/documents/js/js-types/09.object.value.html" class="sidebar-link">for...of 遍历对象</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>函数进阶</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/documents/js/js-function/01.closure.html" class="sidebar-link">作用域链，闭包</a></li><li><a href="/documents/js/js-function/02.var.html" class="sidebar-link">Var</a></li><li><a href="/documents/js/js-function/03.call,apply,bind.html" class="sidebar-link">call/apply/bind</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>对象属性配置</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/documents/js/js-object/01.property.html" class="sidebar-link">属性标志和属性描述符</a></li><li><a href="/documents/js/js-object/02.getter&amp;setter.html" class="sidebar-link">访问器属性：getter 和 setter</a></li><li><a href="/documents/js/js-object/03.proxy&amp;reflect.html" class="sidebar-link">Proxy 和 Reflect</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>类</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/documents/js/js-class/01.class.html" class="sidebar-link">class</a></li><li><a href="/documents/js/js-class/02.class-extend.html" class="sidebar-link">类继承</a></li><li><a href="/documents/js/js-class/03.class-static.html" class="sidebar-link">静态方法</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Promise</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/documents/js/js-promise/01.promise.html" class="sidebar-link">Promise</a></li><li><a href="/documents/js/js-promise/02.promise-chgining.html" class="sidebar-link">Promise 链</a></li><li><a href="/documents/js/js-promise/03.promise-methods.html" class="sidebar-link">Promise API</a></li><li><a href="/documents/js/js-promise/04.async&amp;await.html" class="sidebar-link">async/await</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="扩展运算符和剩余模式"><a href="#扩展运算符和剩余模式" class="header-anchor">#</a> 扩展运算符和剩余模式</h1> <h2 id="扩展运算符"><a href="#扩展运算符" class="header-anchor">#</a> 扩展运算符</h2> <p>扩展运算符与解构赋值类似，<strong>但扩展运算符会将数组中的所有元素取出，且不会创建新的变量</strong>。
+扩展运算符适用于所有的可迭代对象（数组，字符串，map，set，不包括对象）和对象。</p> <p>对数组使用扩展运算符 <code>...</code></p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token keyword">const</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">123</span><span class="token punctuation">,</span> <span class="token number">56</span><span class="token punctuation">,</span> <span class="token number">14</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token operator">...</span>arr<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 123 56 14</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div> <p>在数组作为函数参数时，使用扩展运算符：</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token keyword">const</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token comment">//扩展运算符</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token operator">...</span>arr<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 3 4 5</span>
+
+<span class="token comment">//解构赋值</span>
+<span class="token keyword">const</span> <span class="token punctuation">[</span>a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c<span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 3 4 5</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>在字符串中使用扩展运算符</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token keyword">const</span> str <span class="token operator">=</span> <span class="token string">&quot;12345&quot;</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token operator">...</span>str<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 1 2 3 4 5</span>
+<span class="token keyword">const</span> message <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">...</span>str<span class="token punctuation">,</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;6&quot;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//  ['1', '2', '3', '4', '5', '', '6']</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>扩展运算符完成对象浅拷贝</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token keyword">const</span> stu <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token string">&quot;001&quot;</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">&quot;小明&quot;</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> newStu <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token operator">...</span>stu<span class="token punctuation">,</span> <span class="token literal-property property">gender</span><span class="token operator">:</span> <span class="token string">&quot;male&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>newStu<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//{id: '001', name: '小明', gender: 'male'}</span>
+
+newStu<span class="token punctuation">.</span>id <span class="token operator">=</span> <span class="token string">&quot;002&quot;</span><span class="token punctuation">;</span>
+newStu<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">&quot;小红&quot;</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>stu<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// {id: '001', name: '小明'}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>newStu<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// {id: '002', name: '小红', gender: 'male'}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><h2 id="rest"><a href="#rest" class="header-anchor">#</a> rest</h2> <p>rest 和扩展运算符的语法一样，都为 <code>...</code>，但作用完全相反。</p> <ul><li>扩展运算符将一个数组扩展为若干个单独的元素。而 <code>rest</code> 则是将多个元素压缩成一个数组。
+<ul><li>简单来讲，扩展运算符将一个数组/对象的 <code>[]/{}</code> 去掉，而 <code>rest</code> 则是将多个元素打包成数组/对象。</li></ul></li> <li>扩展运算符多出现于赋值运算符的右边，表示将 <code>...</code> 后的数组解包，而 <code>rest</code> 一般在赋值运算符左边，表示将其余元素打包到 <code>...</code> 后的数组</li></ul> <h3 id="解构中应用"><a href="#解构中应用" class="header-anchor">#</a> 解构中应用</h3> <h4 id="数组解构"><a href="#数组解构" class="header-anchor">#</a> 数组解构</h4> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token comment">//扩展运算符多出现于赋值运算符的右边，表示将...后的数组解包</span>
+<span class="token keyword">const</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token operator">...</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//  [1, 2, 3, 4]， 将数组[3, 4]解包</span>
+
+<span class="token comment">//rest一般在赋值运算符左边，表示将其余元素打包到...后的数组</span>
+<span class="token keyword">const</span> <span class="token punctuation">[</span>a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> <span class="token operator">...</span>others<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> others<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 1 2 [3, 4]， 将元素3，4打包成一个数组</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>扩展运算符结合 <code>rest</code> 在解构赋值中的应用</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token keyword">const</span> fruits <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&quot;苹果&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;香蕉&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;梨子&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;橙子&quot;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token punctuation">[</span>apple<span class="token punctuation">,</span> banana<span class="token punctuation">,</span> <span class="token operator">...</span>otherFruits<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">...</span>fruits<span class="token punctuation">,</span> <span class="token string">&quot;菠萝&quot;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>apple<span class="token punctuation">,</span> banana<span class="token punctuation">,</span> otherFruits<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 苹果 香蕉 ['梨子', '橙子', '菠萝']</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>首先 <code>=</code> 的右边为扩展运算符，去掉 <code>fruits</code> 的 <code>[]</code> 再和 <code>&quot;菠萝&quot;</code> 一起构成一个新数组。左边使用解构赋值，将新数组的第一个和第二个元素分别赋给 <code>apple</code> 和 <code>banana</code> 。剩下的元素构成一个名为 <code>otherFruits</code> 的数组。</p> <p>以下代码和上面等价：</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token keyword">const</span> fruits <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&quot;苹果&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;香蕉&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;梨子&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;橙子&quot;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+fruits<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">&quot;菠萝&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> apple <span class="token operator">=</span> fruits<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  banana <span class="token operator">=</span> fruits<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  otherFruits <span class="token operator">=</span> fruits<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>apple<span class="token punctuation">,</span> banana<span class="token punctuation">,</span> otherFruits<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 苹果 香蕉 ['梨子', '橙子', '菠萝']</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><div class="custom-block warning"><p class="custom-block-title">WARNING</p> <p><code>rest</code> 可以将剩下的元素的打包进一个数组，所以必须是数组的最后一个元素</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token keyword">const</span> <span class="token punctuation">[</span>apple<span class="token punctuation">,</span> banana<span class="token punctuation">,</span> <span class="token operator">...</span>otherFruits<span class="token punctuation">,</span> <span class="token string">&quot;pineapple&quot;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">...</span>fruits<span class="token punctuation">,</span> <span class="token string">&quot;菠萝&quot;</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// error</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></div> <h4 id="对象解构"><a href="#对象解构" class="header-anchor">#</a> 对象解构</h4> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token keyword">const</span> stu <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token string">&quot;001&quot;</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">&quot;小明&quot;</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">gender</span><span class="token operator">:</span> <span class="token string">&quot;male&quot;</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token punctuation">{</span> id<span class="token punctuation">,</span> <span class="token operator">...</span>others <span class="token punctuation">}</span> <span class="token operator">=</span> stu<span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>others<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// {name: '小明', gender: 'male'}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h4 id="函数参数的-rest"><a href="#函数参数的-rest" class="header-anchor">#</a> 函数参数的 rest</h4> <p>同样地，与扩展运算符相反，<code>rest</code> 将传入函数的多个参数打包成一个数组</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">sum</span><span class="token punctuation">(</span><span class="token parameter"><span class="token operator">...</span>numbers</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>numbers<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> s <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> numbers<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    s <span class="token operator">+=</span> numbers<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">sum</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// [1, 2] 3</span>
+<span class="token function">sum</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// [3, 4, 5] 12</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>扩展运算符加 <code>rest</code></p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">sum</span><span class="token punctuation">(</span><span class="token parameter"><span class="token operator">...</span>numbers</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>numbers<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> s <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> numbers<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    s <span class="token operator">+=</span> numbers<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> numbers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">23</span><span class="token punctuation">,</span> <span class="token number">4124</span><span class="token punctuation">,</span> <span class="token number">956</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token function">sum</span><span class="token punctuation">(</span><span class="token operator">...</span>numbers<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// [23, 4124, 956, 4] 5107</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>这里在实参处使用拓展运算符，将数组 <code>numbers</code> 解包成多个值，<code>sum(...numbers);</code> 与 <code>sum(23, 4124, 956, 4)</code> 完全等价。
+而形参处使用 <code>rest</code>，将参数 <code>23, 4124, 956, 4</code> 打包成一个数组，所以 <code>console.log(numbers)</code> 输出 <code>[23, 4124, 956, 4]</code>
+这表示扩展运算符和 <code>rest</code> 互为逆运算。</p> <h2 id="总结"><a href="#总结" class="header-anchor">#</a> 总结</h2> <ul><li>扩展运算符和 <code>rest</code> 语法皆为 <code>...</code> <ul><li>扩展运算符多出现在赋值运算符右边和实参处，表示将 <code>...</code> 后的数组解包</li> <li><code>rest</code> 多出现在赋值运算符左边和形参，表示将剩余的变量打包进 <code>...</code> 后的数组</li></ul></li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/documents/js/js-types/06.destructuring.html" class="prev">
+        解构赋值
+      </a></span> <span class="next"><a href="/documents/js/js-types/08.for...of.html">
+        for...of 遍历数组
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/documents/assets/js/app.0374d463.js" defer></script><script src="/documents/assets/js/2.d25d9c71.js" defer></script><script src="/documents/assets/js/1.758eea13.js" defer></script><script src="/documents/assets/js/61.228dd47d.js" defer></script>
+  </body>
+</html>

@@ -72,6 +72,16 @@ module.exports = {
             text: "Pinia",
             items: [{ text: "pinia基本使用", link: "/vue/pinia/pinia" }],
           },
+          {
+            text: "Vuex",
+            items: [
+              { text: "Vuex安装", link: "/vue/Vuex/Vuex_install" },
+              { text: "State", link: "/vue/Vuex/Vuex_state" },
+              { text: "Mutation", link: "/vue/Vuex/Vuex_mutation" },
+              { text: "Action", link: "/vue/Vuex/Vuex_action" },
+              { text: "Module", link: "/vue/Vuex/Vuex_module" },
+            ],
+          },
         ],
       },
       {
@@ -82,55 +92,19 @@ module.exports = {
         text: "工具",
         link: "/tools/git",
       },
-      // {
-      //   text: "前端",
-      //   items: [
-      //     { text: "JavsScript", link: "/js/js-basic/01.variable" },
-      //     { text: "CSS", link: "/css/layout/float" },
-      //     {
-      //       text: "Vue",
-      //       items: [
-      //         {
-      //           text: "Vue基础",
-      //           items: [
-      //             { text: "响应式原理", link: "/vue/vue-basic/reactivity" },
-      //             { text: "Vue配置项", link: "/vue/vue-basic/vue-basic" },
-      //             { text: "Class绑定", link: "/vue/vue-basic/class&style" },
-      //             { text: "条件渲染", link: "/vue/vue-basic/v-if&v-show" },
-      //             { text: "生命周期", link: "/vue/vue-basic/Vue-lifecycle" },
-      //             { text: "组件基本使用", link: "/vue/vue-basic/component" },
-      //             { text: "组件传值", link: "/vue/vue-basic/communication" },
-      //           ],
-      //         },
-      //         {
-      //           text: "Vue-router",
-      //           items: [
-      //             { text: "基本使用", link: "/vue/vuerouter/vue-router-basic" },
-      //             { text: "动态路由匹配", link: "/vue/vuerouter/params&query" },
-      //             { text: "编程式导航", link: "/vue/vuerouter/navigation" },
-      //           ],
-      //         },
-      //         {
-      //           text: "组合式API",
-      //           items: [
-      //             { text: "setup", link: "/vue/composition/setup" },
-      //             { text: "响应式数据", link: "/vue/composition/ref&reactive" },
-      //             { text: "computed", link: "/vue/composition/computed" },
-      //             { text: "watch", link: "/vue/composition/watch" },
-      //           ],
-      //         },
-      //         {
-      //           text: "Pinia",
-      //           items: [{ text: "pinia基本使用", link: "/vue/pinia/pinia" }],
-      //         },
-      //       ],
-      //     },
-      //     { text: 'TypeScript', link: '/ts/ts-type'}
-      //   ],
-      // },
+      {
+        text: "AJAX",
+        link: "/ajax/url",
+      },
     ],
     sidebar: {
-      collapsable: false,
+      "/ajax/": [
+        {
+          title: "AJAX",
+          children: ["url", "XMLHttpRequest", "Fetch", "Axios"],
+          collapsable: false,
+        },
+      ],
       "/ts/": [
         {
           title: "TypeScript",
@@ -255,6 +229,19 @@ module.exports = {
           collapsable: false,
         },
         {
+          title: "Vue2",
+          children: [
+            "vue2/Vue2_data",
+            "vue2/Vue2_methods",
+            "vue2/Vue2_computed",
+            "vue2/Vue2_watch",
+            "vue2/Vue2_mixin",
+            "vue2/Vue2_render",
+            "vue2/Vue3_directives",
+          ],
+          collapsable: false,
+        },
+        {
           title: "Vue-Router",
           children: [
             "vuerouter/vue-router-basic",
@@ -271,6 +258,17 @@ module.exports = {
             "composition/ref&reactive",
             "composition/computed",
             "composition/watch",
+          ],
+          collapsable: false,
+        },
+        {
+          title: "Vuex",
+          children: [
+            "Vuex/Vuex_install",
+            "Vuex/Vuex_state",
+            "Vuex/Vuex_mutation",
+            "Vuex/Vuex_action",
+            "Vuex/Vuex_module",
           ],
           collapsable: false,
         },

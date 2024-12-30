@@ -161,6 +161,14 @@ module.exports = {
           collapsable: false,
         },
         {
+          title: "原型",
+          children: [
+            "js-prototype/01.prototype",
+            "js-prototype/02.F.prototype",
+          ],
+          collapsable: false,
+        },
+        {
           title: "类",
           children: [
             "js-class/01.class",

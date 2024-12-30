@@ -129,3 +129,34 @@ interface User {
   id: number; // 后续属性声明必须属于同一类型。属性“id”的类型必须为“string”，但此处却为类型“number”。
 }
 ```
+
+::: tip
+## interface 与 type 的区别
+1. type 可以声明基本类型别名，联合类型，元组等类型, interface 只能声明对象类型
+2. 同名的 interface 会自动合并, 而同名的 type 会报错
+```ts
+// 1. type 可以声明基本类型别名，联合类型，元组等类型, interface 只能声明对象类型
+type MyNumber = number;
+type StringOrNull = string | null;
+type Point = [number, number];
+
+// 2. 同名的 interface 会自动合并
+interface User {
+  name: string;
+}
+interface User {
+  age: number;
+}
+const user: User = {
+  name: "张三",
+  age: 12,
+}
+// 同名的 type 会报错
+type User = {
+  name: string;
+}
+type User = { // 报错
+  age: number;
+}
+```
+:::

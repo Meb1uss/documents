@@ -10,31 +10,10 @@ module.exports = {
       {
         text: "JavaScript",
         link: "/js/js-basic/01.variable",
-        // items: [
-        //   { text: "JavsScript基础", link: "/js/js-basic/01.variable" },
-        //   { text: "对象基础", link: "/js/js-object-basic/01.objcet" },
-        //   { text: "数据类型", link: "/js/js-types/01.number" },
-        //   { text: "函数进阶", link: "/js/js-function/01.closure" },
-        //   { text: "对象属性配置", link: "/js/js-object/01.property" },
-        //   { text: "原型，继承", link: "/js/js-prototype/01.prototype" },
-        //   { text: "类", link: "/js/js-class/01.class" },
-        //   { text: "Promise", link: "/js/js-promise/01.promise" },
-        // ],
       },
       {
         text: "CSS",
         link: "/css/layout/float",
-        // items: [
-        //   {
-        //     text: "布局",
-        //     items: [
-        //       { text: "Float 父元素高度塌陷", link: "/css/layout/float" },
-        //       { text: "Flex 基本使用", link: "/css/layout/flex" },
-        //       { text: "Grid 基本使用", link: "/css/layout/grid" },
-        //       { text: "响应式布局", link: "/css/layout/responsive" },
-        //     ],
-        //   },
-        // ],
       },
       {
         text: "Vue",
@@ -197,6 +176,13 @@ module.exports = {
             "js-promise/02.promise-chgining",
             "js-promise/03.promise-methods",
             "js-promise/04.async&await",
+          ],
+          collapsable: false,
+        },
+        {
+          title: "模块化",
+          children: [
+            'js-module/01.ESModule'
           ],
           collapsable: false,
         },
